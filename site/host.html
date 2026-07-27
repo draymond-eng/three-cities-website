@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Host an Event in Chicago | Three Cities Social</title>
+<meta name="description" content="Host your event at one of our two Chicago clubhouses. Birthdays, offsites, dinners, launches, more. Inquire for availability." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/host" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/host" />
+<meta property="og:title" content="Host an Event in Chicago. Three Cities Social." />
+<meta property="og:description" content="Host your event at one of our two Chicago clubhouses. Birthdays, offsites, dinners, launches, more. Inquire for availability." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/1761593553812-0FZZT1SJGQ0Y0ZT1NR1P/3+Cities-083.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Host an Event in Chicago. Three Cities Social." />
+<meta name="twitter:description" content="Host your event at one of our two Chicago clubhouses. Birthdays, offsites, dinners, launches, more. Inquire for availability." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/1761593553812-0FZZT1SJGQ0Y0ZT1NR1P/3+Cities-083.jpg?format=2000w" />
+
+<link rel="stylesheet" href="styles.css" />
+<style>
+.page-hero {
+  padding: 140px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 720px) { .page-hero { padding: 180px 0 96px; } }
+.page-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: end;
+}
+@media (min-width: 900px) {
+  .page-hero__inner { grid-template-columns: 1fr 1fr; gap: 64px; }
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(56px, 9vw, 132px);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero__meta {
+  font-family: var(--font-sans); font-weight: 700;
+  font-size: 11px; letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  color: var(--accent); margin-bottom: 18px;
+  display: flex; align-items: center; gap: 14px;
+}
+.page-hero__meta::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+.page-hero__intro p { font-size: 18px; line-height: 1.65; color: var(--fg-muted); max-width: 44ch; }
+
+/* Venue rows (like Locations) */
+.venue-row { padding: 96px 0; }
+@media (min-width: 720px) { .venue-row { padding: 128px 0; } }
+.venue-row + .venue-row { border-top: 1px solid var(--line); }
+.venue-row__inner {
+  display: grid; grid-template-columns: 1fr; gap: 56px; align-items: start;
+}
+@media (min-width: 880px) {
+  .venue-row__inner { grid-template-columns: 1.05fr 1fr; gap: 96px; }
+  .venue-row--reverse .venue-row__inner { grid-template-columns: 1fr 1.05fr; }
+  .venue-row--reverse .venue-row__media { order: 2; }
+}
+.venue-row__media {
+  position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--ink-700);
+}
+.venue-row__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.venue-row__body { display: flex; flex-direction: column; gap: 24px; }
+.venue-row__chapter {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--font-sans); font-weight: 700;
+  font-size: 11px; letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  color: var(--accent);
+}
+.venue-row__chapter::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: 0.7; }
+.venue-row__name {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(48px, 7vw, 84px); line-height: 0.98;
+  letter-spacing: -0.02em; margin: 0;
+}
+.venue-row__copy { font-size: 17px; line-height: 1.7; color: var(--fg); max-width: 48ch; }
+.venue-row__copy + .venue-row__copy { margin-top: 12px; color: var(--fg-muted); }
+
+.spaces {
+  list-style: none; padding: 0; margin: 8px 0 0;
+  border-top: 1px solid var(--line);
+}
+.spaces li {
+  padding: 16px 0;
+  display: grid; grid-template-columns: 1fr auto; gap: 18px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+}
+.spaces__name {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 22px; line-height: 1.2; letter-spacing: -0.005em;
+}
+.spaces__cap {
+  font-family: var(--font-sans); font-weight: 700;
+  font-size: 11px; letter-spacing: var(--tracking-wider); text-transform: uppercase;
+  color: var(--fg-muted); white-space: nowrap;
+}
+
+/* Event types */
+.event-types {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 32px 0;
+  margin-top: 16px;
+}
+@media (min-width: 760px) {
+  .event-types { grid-template-columns: repeat(3, 1fr); gap: 12px 48px; padding: 40px 0; }
+}
+.event-types li {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  padding: 8px 0;
+}
+
+/* Inquiry form */
+.inquire { background: var(--bg-sunken); }
+.inquire__inner {
+  display: grid; grid-template-columns: 1fr; gap: 56px;
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+@media (min-width: 820px) { .inquire__inner { grid-template-columns: 1fr 1.3fr; gap: 96px; align-items: start; } }
+.inquire__head { display: flex; flex-direction: column; gap: 18px; }
+@media (min-width: 820px) { .inquire__head { position: sticky; top: 100px; } }
+
+.form { display: flex; flex-direction: column; gap: 22px; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 559px) { .form__row { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label {
+  font-family: var(--font-sans); font-weight: 700;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg-muted);
+}
+.field input, .field textarea, .field select {
+  font-family: var(--font-sans); font-size: 16px; color: var(--fg);
+  background: var(--off-white);
+  border: 1px solid var(--line); border-radius: 2px;
+  padding: 14px 16px; outline: none; width: 100%;
+}
+.field textarea { resize: vertical; min-height: 110px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--fg-faint); }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); }
+.field select {
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'><path d='M1 1l5 5 5-5' stroke='%23984929' stroke-width='1.5' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 38px;
+}
+.form__legal { font-size: 12px; color: var(--fg-subtle); margin-top: 8px; }
+.form__success {
+  display: none;
+  padding: 40px 36px;
+  background: var(--off-white);
+  border: 1px solid var(--accent); border-radius: 2px;
+  position: relative;
+}
+.form__success::before {
+  content: ""; position: absolute; left: -1px; top: -1px; bottom: -1px;
+  width: 4px; background: var(--accent);
+}
+.form__success.is-on { display: flex; flex-direction: column; gap: 14px; }
+.form__success h3 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(32px, 4vw, 44px); line-height: 1.05; letter-spacing: -0.01em;
+  margin: 0; color: var(--fg);
+}
+.form__success p { color: var(--fg); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html" class="is-active">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent" style="margin-top: 24px; align-self: flex-start;">Apply for Membership</a>
+</aside>
+
+<section class="page-hero" data-screen-label="02 Hero">
+  <div class="shell">
+    <div class="page-hero__inner">
+      <div>
+        <div class="page-hero__meta reveal">Venue Inquiries</div>
+        <h1 class="reveal" style="--delay: 80ms">Host it<br /><em>at our place</em>.</h1>
+      </div>
+      <div class="page-hero__intro reveal" style="--delay: 160ms">
+        <p>Two clubhouses in Chicago, designed for the kind of evening you actually remember. Birthday dinners, company offsites, screenings, showers, launches. Tell us what you have in mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="venue-row" id="river-north" data-screen-label="03 River North">
+  <div class="shell">
+    <div class="venue-row__inner">
+      <div class="venue-row__media reveal">
+        <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2000w" alt="Inside River North" loading="lazy" />
+      </div>
+      <div class="venue-row__body reveal" style="--delay: 100ms">
+        <span class="venue-row__chapter">River North &middot; Chapter i</span>
+        <h2 class="venue-row__name">River North.</h2>
+        <p class="venue-row__copy">320 W. Ohio St. Multiple rentable spaces and a working bar. Best for seated dinners, launches, and intimate evening gatherings.</p>
+        <ul class="spaces">
+          <li><span class="spaces__name">The library lounge</span><span class="spaces__cap">Seats 24 &middot; Standing 60</span></li>
+          <li><span class="spaces__name">Dining room</span><span class="spaces__cap">Seats 16 &middot; Long table</span></li>
+          <li><span class="spaces__name">Bar &amp; main floor</span><span class="spaces__cap">Standing 120</span></li>
+          <li><span class="spaces__name">Full buyout</span><span class="spaces__cap">Standing 180</span></li>
+        </ul>
+        <a href="#inquire" class="link-arrow" style="align-self:flex-start; margin-top:10px;">Inquire about River North <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="venue-row venue-row--reverse" id="wicker-park" data-screen-label="04 Wicker Park">
+  <div class="shell">
+    <div class="venue-row__inner">
+      <div class="venue-row__media reveal">
+        <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/1761593553812-0FZZT1SJGQ0Y0ZT1NR1P/3+Cities-083.jpg?format=2000w" alt="Wicker Park terrace" loading="lazy" />
+      </div>
+      <div class="venue-row__body reveal" style="--delay: 100ms">
+        <span class="venue-row__chapter">Wicker Park &middot; Chapter ii</span>
+        <h2 class="venue-row__name">Wicker Park.</h2>
+        <p class="venue-row__copy">1643 N. Milwaukee Ave. Our newest space, built for events. An outdoor terrace with the skyline behind it, a pool table, a boardroom, and open lounges.</p>
+        <ul class="spaces">
+          <li><span class="spaces__name">Outdoor terrace</span><span class="spaces__cap">Standing 80 &middot; Skyline view</span></li>
+          <li><span class="spaces__name">Dining room</span><span class="spaces__cap">Seats 20</span></li>
+          <li><span class="spaces__name">Boardroom</span><span class="spaces__cap">Seats 12</span></li>
+          <li><span class="spaces__name">Lounge &amp; bar</span><span class="spaces__cap">Standing 100</span></li>
+          <li><span class="spaces__name">Full buyout</span><span class="spaces__cap">Standing 200</span></li>
+        </ul>
+        <a href="#inquire" class="link-arrow" style="align-self:flex-start; margin-top:10px;">Inquire about Wicker Park <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--rule" data-screen-label="05 What we host">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">What we host</span>
+      <h2 class="h-section">Most gatherings, <em>welcome here</em>.</h2>
+    </div>
+    <ul class="event-types reveal">
+      <li>Birthdays</li>
+      <li>Company offsites</li>
+      <li>Private dinners</li>
+      <li>Launches</li>
+      <li>Screenings</li>
+      <li>Bridal &amp; baby showers</li>
+      <li>Rehearsal dinners</li>
+      <li>Holiday parties</li>
+      <li>Board meetings</li>
+      <li>Workshops</li>
+      <li>Panel talks</li>
+      <li>Brand activations</li>
+    </ul>
+    <p class="reveal" style="margin-top: 24px; color: var(--fg-muted); max-width: 48ch;">
+      Not seeing your event type? Ask anyway. If it fits the room, it fits the calendar.
+    </p>
+    <p class="reveal" style="margin-top: 14px; color: var(--fg-subtle); font-size: 14px; font-style: italic; font-family: var(--font-display); max-width: 56ch;">
+      A few we do not host: music video shoots and frat parties. We reserve the right to decline any event that does not fit the room.
+    </p>
+  </div>
+</section>
+
+<section class="section inquire" id="inquire" data-screen-label="06 Inquire">
+  <div class="shell">
+    <div class="inquire__inner">
+      <div class="inquire__head reveal">
+        <span class="eyebrow eyebrow--accent">Inquire</span>
+        <h2 class="h-section">Tell us about <em>your event</em>.</h2>
+        <p class="p-muted">Drop the basics below. We will follow up within two business days with availability and pricing.</p>
+      </div>
+
+      <form class="form reveal" id="inquire-form" style="--delay: 100ms" novalidate>
+        <input type="hidden" name="form_name" value="Venue Inquiry" />
+        <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="form__row">
+          <div class="field">
+            <label for="f-first">First name</label>
+            <input id="f-first" name="first_name" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="f-last">Last name</label>
+            <input id="f-last" name="last_name" type="text" autocomplete="family-name" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(312) 555-0123" maxlength="14" />
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-location">Preferred clubhouse</label>
+            <select id="f-location" name="preferred_location" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="River North">River North</option>
+              <option value="Wicker Park">Wicker Park</option>
+              <option value="No preference">No preference</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-type">Event type</label>
+            <select id="f-type" name="event_type" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Birthday</option>
+              <option>Company offsite</option>
+              <option>Private dinner</option>
+              <option>Launch or activation</option>
+              <option>Screening</option>
+              <option>Shower</option>
+              <option>Rehearsal dinner</option>
+              <option>Holiday party</option>
+              <option>Board meeting</option>
+              <option>Workshop or panel</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-date">Preferred date</label>
+            <input id="f-date" name="preferred_date" type="date" />
+          </div>
+          <div class="field">
+            <label for="f-guests">Guest count</label>
+            <input id="f-guests" name="guest_count" type="text" placeholder="e.g. 40 standing, 20 seated" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-details">Anything else</label>
+          <textarea id="f-details" name="details" rows="4" placeholder="What you're celebrating, how you want it to feel, food and drink expectations, anything we should know."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--accent btn--lg" style="align-self: flex-start; margin-top: 12px;">
+          Send Inquiry <span class="arrow">→</span>
+        </button>
+
+        <p class="form__legal">We reply within two business days. We never share your information.</p>
+      </form>
+
+      <div class="form__success" id="inquire-success">
+        <span class="eyebrow eyebrow--accent" style="margin-bottom: 6px;">Inquiry received</span>
+        <h3>Thanks. We have it.</h3>
+        <p>Someone from our team will email you within two business days from <a href="mailto:hello@threecitiessocial.com" style="color: var(--accent);">hello@threecitiessocial.com</a> with availability, pricing, and next steps.</p>
+        <p class="p-muted" style="margin-top: 4px;">If your date is tight, mention it in your reply and we will move things forward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="locations.html#river-north">River North<br/>320 W. Ohio St</a>
+        <a href="locations.html#wicker-park" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="events.html">Programming</a>
+        <a href="networking-events-chicago.html">Networking events in Chicago</a>
+        <a href="host.html">Venue Rental</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecitiessocial" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  var phone = document.getElementById('f-phone');
+  if (phone) phone.addEventListener('input', function (e) {
+    var d = e.target.value.replace(/\D/g, '').slice(0, 10); var out = d;
+    if (d.length > 6)      out = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+    else if (d.length > 3) out = '(' + d.slice(0,3) + ') ' + d.slice(3);
+    else if (d.length > 0) out = '(' + d;
+    e.target.value = out;
+  });
+
+  // Set min date on the inquiry date picker so past dates are unavailable.
+  var dateInput = document.getElementById('f-date');
+  if (dateInput) {
+    var today = new Date();
+    var y = today.getFullYear();
+    var m = String(today.getMonth() + 1).padStart(2, '0');
+    var d = String(today.getDate()).padStart(2, '0');
+    dateInput.setAttribute('min', y + '-' + m + '-' + d);
+  }
+
+  // Posts to the same Google Apps Script web app as the application form.
+  // Replace GSCRIPT_URL with your deployed web-app URL (ends in /exec).
+  var GSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxYxqizKYnKEKIdQv3JmsL4tK9-S2HbgS5BhrjCeB7p_u8nq_pZd95-CxxtsvAPRW-Kg/exec';
+
+  var form = document.getElementById('inquire-form');
+  var success = document.getElementById('inquire-success');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (form.querySelector('[name="_honey"]').value) return; // bot trap
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.innerHTML = 'Sending...'; }
+
+    function showSuccess() {
+      form.style.display = 'none';
+      success.classList.add('is-on');
+      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    var data = new FormData(form);
+    data.append('submitted_at', new Date().toISOString());
+    data.append('page', location.href);
+
+    if (!GSCRIPT_URL || GSCRIPT_URL === 'GOOGLE_SCRIPT_URL_HERE') {
+      var obj = {}; data.forEach(function (v, k) { obj[k] = v; });
+      console.info('[inquiry] No endpoint set yet. Submission:', obj);
+      showSuccess();
+      return;
+    }
+
+    fetch(GSCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function () { showSuccess(); })
+      .catch(function () {
+        if (btn) { btn.disabled = false; btn.innerHTML = 'Send Inquiry <span class="arrow">→</span>'; }
+        alert('We hit a snag sending your inquiry. Please try again, or email us at hello@threecitiessocial.com.');
+      });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

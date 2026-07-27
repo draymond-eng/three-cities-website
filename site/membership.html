@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Membership and Pricing | Three Cities Social Chicago</title>
+<meta name="description" content="Social club membership in Chicago. One rate, both clubhouses, every program. Monthly, quarterly, and annual plans. Apply to join." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/membership" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/membership" />
+<meta property="og:title" content="Membership and Pricing. Three Cities Social, Chicago." />
+<meta property="og:description" content="Monthly, quarterly, and annual plans at Three Cities Social. One membership, both Chicago clubhouses, every program. Apply to join." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Membership and Pricing. Three Cities Social, Chicago." />
+<meta name="twitter:description" content="Monthly, quarterly, and annual plans at Three Cities Social. One membership, both Chicago clubhouses, every program. Apply to join." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2000w" />
+
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Page hero */
+.page-hero {
+  padding: 160px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 720px) { .page-hero { padding: 200px 0 110px; } }
+.page-hero__inner { display: flex; flex-direction: column; gap: 24px; max-width: 28ch; }
+.page-hero h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(60px, 9vw, 132px); line-height: 0.96; letter-spacing: -0.02em; margin: 0; }
+.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero .lede { max-width: 36ch; }
+
+/* Pricing card */
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+@media (min-width: 760px) {
+  .pricing {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .tier + .tier { border-left: 0; }
+}
+
+.tier {
+  padding: 48px 32px;
+  display: flex; flex-direction: column; gap: 16px;
+  border: 1px solid var(--line);
+  position: relative;
+}
+@media (min-width: 760px) { .tier { padding: 56px 40px; } }
+
+.tier--featured {
+  background: var(--matte-black);
+  color: var(--off-white);
+  border-color: var(--matte-black);
+  z-index: 1;
+}
+.tier--featured p { color: var(--fg-inverse-muted); }
+.tier__flag {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--autumn-soft);
+  padding: 6px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+}
+.tier__label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+.tier__amount {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(72px, 8.5vw, 112px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+.tier__amount-row {
+  display: flex; align-items: baseline; gap: 6px;
+}
+.tier__amount-row .unit {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--fg-muted);
+  letter-spacing: 0;
+}
+.tier--featured .tier__amount-row .unit { color: var(--fg-inverse-muted); }
+.tier__copy { font-size: 15px; max-width: 32ch; color: var(--fg-muted); }
+.tier--featured .tier__copy { color: var(--fg-inverse-muted); }
+
+/* Detail rows: billing / enrollment / perk */
+.tier__details {
+  list-style: none; padding: 0; margin: 12px 0 0;
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+.tier--featured .tier__details { border-top-color: var(--line-inverse-strong); }
+.tier__details li { padding: 14px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: baseline; }
+.tier--featured .tier__details li { border-bottom-color: var(--line-inverse); }
+.tier__details dt {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.tier--featured .tier__details dt { color: var(--fg-inverse-muted); }
+.tier__details dd {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--fg);
+  text-align: right;
+}
+.tier--featured .tier__details dd { color: var(--off-white); }
+.tier__details dd em {
+  font-style: italic; color: var(--accent); font-family: var(--font-display);
+  font-size: 16px;
+}
+.tier--featured .tier__details dd em { color: var(--autumn-soft); }
+
+.tier__cta { margin-top: auto; padding-top: 28px; }
+.tier__cta .btn { width: 100%; }
+
+/* Pricing footnote sits below all three tiers. */
+.pricing-note {
+  margin: 20px 0 0;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--fg-subtle);
+  text-align: center;
+}
+
+/* Equal-height tier cards: pin description to a consistent block so the
+   detail rows + Apply buttons align across all three columns. */
+.tier__copy { min-height: 5.5em; }
+.tier__details { min-height: 132px; }
+@media (max-width: 759px) { .tier__copy, .tier__details { min-height: 0; } }
+
+/* Community tier: events-only, its own block below the three full tiers. */
+.community-tier {
+  margin-top: 24px;
+  padding: 32px 36px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-raised);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+@media (min-width: 820px) {
+  .community-tier { grid-template-columns: 1.4fr 1fr auto; gap: 48px; }
+}
+.community-tier__lead { display: flex; flex-direction: column; gap: 10px; }
+.community-tier__label {
+  font-family: var(--font-sans); font-weight: 700;
+  font-size: 11px; letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  color: var(--accent);
+}
+.community-tier__price { display: flex; align-items: baseline; gap: 6px; }
+.community-tier__amount {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(48px, 6vw, 64px); line-height: 0.95; letter-spacing: -0.02em;
+  color: var(--fg);
+}
+.community-tier__unit {
+  font-family: var(--font-sans); font-weight: 400; font-size: 15px; color: var(--fg-muted);
+}
+.community-tier__copy { font-size: 15px; color: var(--fg-muted); max-width: 46ch; }
+.community-tier__details {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+.community-tier__details li {
+  padding: 12px 0; border-bottom: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: baseline;
+}
+.community-tier__details dt {
+  font-family: var(--font-sans); font-weight: 700;
+  font-size: 11px; letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.community-tier__details dd { margin: 0; font-family: var(--font-sans); font-size: 14px; color: var(--fg); text-align: right; }
+.community-tier__cta .btn { white-space: nowrap; }
+
+/* Couples note below pricing block */
+.couples-note {
+  margin-top: 32px;
+  padding: 22px 28px;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  display: flex; flex-wrap: wrap; gap: 8px 18px;
+  align-items: baseline;
+}
+.couples-note__label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.couples-note__copy { font-size: 15px; color: var(--fg-muted); flex: 1; min-width: 280px; }
+.couples-note__copy strong { color: var(--fg); font-weight: 600; }
+
+/* Includes (long list) */
+.includes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 760px) { .includes { grid-template-columns: 1.2fr 1fr; gap: 96px; } }
+.includes__left { display: flex; flex-direction: column; gap: 18px; }
+.includes__list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+.includes__list li {
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.includes__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--accent);
+  line-height: 1.4;
+}
+.includes__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+.includes__copy { font-size: 15px; color: var(--fg-muted); }
+
+/* Apply form */
+.apply { background: var(--bg-sunken); }
+.apply__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+@media (min-width: 820px) { .apply__inner { grid-template-columns: 1fr 1.3fr; gap: 96px; align-items: start; } }
+.apply__head { display: flex; flex-direction: column; gap: 18px; }
+.form { display: flex; flex-direction: column; gap: 22px; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 559px) { .form__row { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.field input, .field textarea, .field select {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--fg);
+  background: var(--off-white);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 14px 16px;
+  outline: none;
+  width: 100%;
+}
+.field textarea { resize: vertical; min-height: 110px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--fg-faint); }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); }
+.field select {
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'><path d='M1 1l5 5 5-5' stroke='%23984929' stroke-width='1.5' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 38px;
+}
+.form__legal { font-size: 12px; color: var(--fg-subtle); margin-top: 8px; }
+.field--check { margin-top: 4px; }
+.check { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+.check input { position: absolute; opacity: 0; width: 0; height: 0; }
+.check__box {
+  flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px;
+  border: 1px solid var(--line-strong); border-radius: 2px;
+  background: var(--off-white);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background 220ms, border-color 220ms;
+}
+.check__box::after {
+  content: ""; width: 11px; height: 6px;
+  border-left: 2px solid var(--off-white); border-bottom: 2px solid var(--off-white);
+  transform: rotate(-45deg) translateY(-1px); opacity: 0;
+  transition: opacity 220ms;
+}
+.check input:checked + .check__box { background: var(--accent); border-color: var(--accent); }
+.check input:checked + .check__box::after { opacity: 1; }
+.check input:focus-visible + .check__box { outline: 2px solid var(--accent); outline-offset: 2px; }
+.check__label {
+  font-family: var(--font-sans); font-size: 15px; line-height: 1.5; color: var(--fg);
+  font-weight: 500; text-transform: none; letter-spacing: normal;
+}
+.form__success {
+  display: none;
+  padding: 40px 36px;
+  background: var(--off-white);
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  position: relative;
+}
+.form__success::before {
+  content: "";
+  position: absolute;
+  left: -1px; top: -1px; bottom: -1px;
+  width: 4px;
+  background: var(--accent);
+}
+.form__success.is-on { display: flex; flex-direction: column; gap: 14px; }
+.form__success h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--fg);
+}
+.form__success p { color: var(--fg); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html" class="is-active">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="#apply" class="btn btn--accent">Apply for Membership</a>
+</aside>
+
+<!-- HERO -->
+<section class="page-hero" data-screen-label="02 Hero">
+  <div class="shell">
+    <div class="page-hero__inner">
+      <span class="eyebrow eyebrow--accent reveal">Membership</span>
+      <h1 class="reveal" style="--delay: 80ms">Social club membership <em>in Chicago</em>.</h1>
+      <p class="lede reveal" style="--delay: 160ms">One membership, both Chicago clubhouses, every program on the calendar. The lower the rate, the longer you commit. We review every application, and most decisions come back inside a week.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" data-screen-label="03 Pricing">
+  <div class="shell">
+    <div class="pricing">
+      <article class="tier reveal">
+        <span class="tier__label">Monthly</span>
+        <div class="tier__amount-row">
+          <span class="tier__amount">$249</span>
+          <span class="unit">/ month</span>
+        </div>
+        <p class="tier__copy">Maximum flexibility. Try it for as long as it makes sense.</p>
+        <dl class="tier__details">
+          <li><dt>Billing</dt><dd>Monthly</dd></li>
+          <li><dt>Enrollment fee</dt><dd>$150</dd></li>
+        </dl>
+        <div class="tier__cta">
+          <a href="#apply" class="btn btn--ghost btn--lg">Apply <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="tier reveal" style="--delay: 80ms">
+        <span class="tier__label">Quarterly</span>
+        <div class="tier__amount-row">
+          <span class="tier__amount">$219</span>
+          <span class="unit">/ month</span>
+        </div>
+        <p class="tier__copy">Three months at a time. A small commitment for a real one.</p>
+        <dl class="tier__details">
+          <li><dt>Billing</dt><dd>Every 3 months ($657)</dd></li>
+          <li><dt>Enrollment fee</dt><dd><em>Waived</em></dd></li>
+        </dl>
+        <div class="tier__cta">
+          <a href="#apply" class="btn btn--ghost btn--lg">Apply <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="tier tier--featured reveal" style="--delay: 160ms">
+        <span class="tier__flag">Best value</span>
+        <span class="tier__label" style="color: var(--autumn-soft);">Annually</span>
+        <div class="tier__amount-row">
+          <span class="tier__amount">$199</span>
+          <span class="unit">/ month</span>
+        </div>
+        <p class="tier__copy">For the people already showing up every week. Our best rate, no enrollment fee, and a ticket to our New Year&rsquo;s Eve party every year.</p>
+        <dl class="tier__details">
+          <li><dt>Billing</dt><dd>Two payments of $1,194</dd></li>
+          <li><dt>Enrollment fee</dt><dd><em>Waived</em></dd></li>
+          <li><dt>Included</dt><dd>New Year&rsquo;s Eve party ticket</dd></li>
+        </dl>
+        <div class="tier__cta">
+          <a href="#apply" class="btn btn--accent btn--lg">Apply <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+
+    <p class="pricing-note reveal" style="--delay: 280ms">Enrollment fee waived on quarterly and annual plans.</p>
+
+    <!-- Community tier: events-only access, its own block, monthly only. -->
+    <aside class="community-tier reveal" style="--delay: 300ms">
+      <div class="community-tier__lead">
+        <span class="community-tier__label">Community</span>
+        <div class="community-tier__price">
+          <span class="community-tier__amount">$119</span>
+          <span class="community-tier__unit">/ month</span>
+        </div>
+        <p class="community-tier__copy">Events only. Join the 30 to 45 gatherings we run each month, without daily clubhouse access. A way in for people who come for the people first.</p>
+      </div>
+      <dl class="community-tier__details">
+        <li><dt>Access</dt><dd>Programming and events</dd></li>
+        <li><dt>Billing</dt><dd>Monthly</dd></li>
+        <li><dt>Enrollment fee</dt><dd>$150</dd></li>
+      </dl>
+      <div class="community-tier__cta">
+        <a href="#apply" class="btn btn--ghost btn--lg">Apply <span class="arrow">→</span></a>
+      </div>
+    </aside>
+
+    <!-- Couples is a secondary note, not its own pricing tab. -->
+    <aside class="couples-note reveal" style="--delay: 240ms">
+      <span class="couples-note__label">Couples</span>
+      <p class="couples-note__copy">Add <strong>$50 per month</strong> to any plan to add a partner at the same address. One application, one billing, both members get full access and guest privileges.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- WHAT IS INCLUDED -->
+<section class="section section--rule" data-screen-label="04 Included">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">What is included</span>
+      <h2 class="h-section">What your <em>membership covers</em>.</h2>
+    </div>
+
+    <div class="includes">
+      <div class="includes__left reveal">
+        <p class="p-large p-muted">
+          Four ways in. The three full plans share the same access, both clubhouses and every program. Community is events only. The lower the rate, the longer you commit.
+        </p>
+        <p class="p-muted">
+          We review every application to keep the community strong. Most decisions come back inside a week.
+        </p>
+      </div>
+
+      <ul class="includes__list reveal" style="--delay: 100ms">
+        <li>
+          <span class="includes__num">i.</span>
+          <div>
+            <h3 class="includes__title">Daily access to both clubhouses</h3>
+            <p class="includes__copy">River North and Wicker Park. Open every day for members to work, hang, eat, or host.</p>
+          </div>
+        </li>
+        <li>
+          <span class="includes__num">ii.</span>
+          <div>
+            <h3 class="includes__title">Most weekly programming</h3>
+            <p class="includes__copy">Dinners, runs, talks, pickleball, volunteer days, member nights. A small number of partner events carry an outside venue or instructor fee, called out on the calendar.</p>
+          </div>
+        </li>
+        <li>
+          <span class="includes__num">iii.</span>
+          <div>
+            <h3 class="includes__title">Two guests at any time</h3>
+            <p class="includes__copy">Bring two people with you to the clubhouses or any open program, at no cost.</p>
+          </div>
+        </li>
+        <li>
+          <span class="includes__num">iv.</span>
+          <div>
+            <h3 class="includes__title">Host your own gatherings</h3>
+            <p class="includes__copy">Book a dining table, the boardroom, or the terrace for your own dinner, meeting, or get-together.</p>
+          </div>
+        </li>
+        <li>
+          <span class="includes__num">v.</span>
+          <div>
+            <h3 class="includes__title">Member directory and intros</h3>
+            <p class="includes__copy">Find members who do what you want to do. We will make the introduction.</p>
+          </div>
+        </li>
+        <li>
+          <span class="includes__num">vi.</span>
+          <div>
+            <h3 class="includes__title">Reciprocal access</h3>
+            <p class="includes__copy">As we open in more cities, your membership travels with you.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="section apply" id="apply" data-screen-label="05 Apply">
+  <div class="shell">
+    <div class="apply__inner">
+      <div class="apply__head reveal">
+        <span class="eyebrow eyebrow--accent">Apply</span>
+        <h2 class="h-section">Tell us a little <em>about you</em>.</h2>
+        <p class="p-muted">Most people tour first, then apply. If you have already seen the space at an event or a visit, you can apply right here.</p>
+        <a href="https://meetings-na2.hubspot.com/draymond?uuid=0f6ed97e-5852-459c-9c39-32b3e2f93b04" target="_blank" rel="noopener" class="btn btn--accent" style="align-self: flex-start; margin-top: 4px;">Book a Tour First <span class="arrow">→</span></a>
+      </div>
+
+      <form class="form reveal" id="apply-form" style="--delay: 100ms" novalidate>
+        <input type="hidden" name="form_name" value="Membership Application" />
+        <input type="text"   name="_honey"    style="display:none" tabindex="-1" autocomplete="off" />
+        <div class="field">
+          <label for="f-visited">Have you toured or visited one of our clubhouses?</label>
+          <select id="f-visited" name="visited" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="Yes, River North">Yes, River North</option>
+            <option value="Yes, Wicker Park">Yes, Wicker Park</option>
+            <option value="Not yet, but I would like to tour">Not yet, but I would like to tour</option>
+          </select>
+        </div>
+        <div class="field field--check">
+          <label class="check">
+            <input type="checkbox" id="f-readynow" name="ready_to_join_now" value="Yes, ready to join now, no tour needed" />
+            <span class="check__box" aria-hidden="true"></span>
+            <span class="check__label">I am ready to join now and do not need to book a tour.</span>
+          </label>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="f-first">First name</label>
+            <input id="f-first" name="first_name" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="f-last">Last name</label>
+            <input id="f-last" name="last_name" type="text" autocomplete="family-name" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(312) 555-0123" maxlength="14" required />
+        </div>
+        <div class="field">
+          <label for="f-tier">Membership interest</label>
+            <select id="f-tier" name="membership" required>
+              <option value="" disabled selected>Choose one</option>
+              <optgroup label="Individual">
+                <option value="Monthly">Monthly &middot; $249 / month</option>
+                <option value="Quarterly">Quarterly &middot; $219 / month</option>
+                <option value="Annually">Annually &middot; $199 / month</option>
+              </optgroup>
+              <optgroup label="Couples (+$50 / month)">
+                <option value="Couples Monthly">Couples Monthly &middot; $299 / month</option>
+                <option value="Couples Quarterly">Couples Quarterly &middot; $269 / month</option>
+                <option value="Couples Annually">Couples Annually &middot; $249 / month</option>
+              </optgroup>
+              <optgroup label="Community (events only)">
+                <option value="Community Monthly">Community &middot; $119 / month</option>
+              </optgroup>
+              <option value="Corporate">Corporate</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-neighborhood">Neighborhood</label>
+            <input id="f-neighborhood" name="neighborhood" type="text" placeholder="e.g. West Loop, Logan Square" />
+          </div>
+        <div class="field">
+          <label for="f-looking">What are you looking for</label>
+          <textarea id="f-looking" name="looking_for" rows="2" placeholder="New to the city, looking to meet people, want a better social life, something else." required></textarea>
+        </div>
+        <div class="field">
+          <label for="f-about">Tell us about yourself</label>
+          <textarea id="f-about" name="about" rows="4" placeholder="What you do, what you are into, what you are hoping to find here." required></textarea>
+        </div>
+        <div class="field">
+          <label for="f-referral">How did you hear about us? <span style="font-weight:400; color: var(--fg-faint); letter-spacing: 0.04em; text-transform: none;">(optional)</span></label>
+          <select id="f-referral" name="referral">
+            <option value="" selected>Choose one</option>
+            <option value="Friend or member">Friend or member</option>
+            <option value="Instagram or social">Instagram or social</option>
+            <option value="Press or article">Press or article</option>
+            <option value="Search">Search</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--accent btn--lg" style="align-self: flex-start; margin-top: 12px;">
+          Submit &amp; Book a Tour <span class="arrow">→</span>
+        </button>
+
+        <p class="form__legal">Have not seen the space yet? A tour is the best first step. We review every application personally and never share your information.</p>
+      </form>
+
+      <div class="form__success" id="apply-success">
+        <span class="eyebrow eyebrow--accent" style="margin-bottom: 6px;">Application received</span>
+        <h3>Thanks. We have it.</h3>
+        <p>We read every application personally and will be in touch. If you have not toured yet, book a visit now to move things along.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top: 12px;">
+          <a href="../join.html" class="btn btn--accent">Book a Tour <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="locations.html#river-north">River North<br/>320 W. Ohio St</a>
+        <a href="locations.html#wicker-park" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="index.html#programming">Programming</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  // Phone formatting
+  var phone = document.getElementById('f-phone');
+  if (phone) phone.addEventListener('input', function (e) {
+    var d = e.target.value.replace(/\D/g, '').slice(0, 10);
+    var out = d;
+    if (d.length > 6)      out = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+    else if (d.length > 3) out = '(' + d.slice(0,3) + ') ' + d.slice(3);
+    else if (d.length > 0) out = '(' + d;
+    e.target.value = out;
+  });
+
+  // ---- Application form submit ----
+  // Posts to a Google Apps Script web app, which writes the row to a Google
+  // Sheet and emails the founders. Replace GSCRIPT_URL with your deployed
+  // web-app URL (ends in /exec). Until then, submissions log to console.
+  var GSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxYxqizKYnKEKIdQv3JmsL4tK9-S2HbgS5BhrjCeB7p_u8nq_pZd95-CxxtsvAPRW-Kg/exec';
+
+  var form = document.getElementById('apply-form');
+  var success = document.getElementById('apply-success');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (form.querySelector('[name="_honey"]').value) return; // bot trap
+
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = 'Sending...'; }
+
+    function showSuccess() {
+      form.style.display = 'none';
+      success.classList.add('is-on');
+      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    var data = new FormData(form);
+    data.append('submitted_at', new Date().toISOString());
+    data.append('page', location.href);
+
+    if (!GSCRIPT_URL || GSCRIPT_URL === 'GOOGLE_SCRIPT_URL_HERE') {
+      var obj = {}; data.forEach(function (v, k) { obj[k] = v; });
+      console.info('[apply] No endpoint set yet. Submission:', obj);
+      showSuccess();
+      return;
+    }
+
+    // Apps Script web apps do not return CORS headers, so we fire no-cors
+    // and treat the request as success once it sends.
+    fetch(GSCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function () { showSuccess(); })
+      .catch(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = 'Submit Application <span class="arrow">→</span>'; }
+        alert('We hit a snag sending your application. Please try again, or email us at hello@threecitiessocial.com.');
+      });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

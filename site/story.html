@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Our Story | A Chicago Social Club Built on Connection</title>
+<meta name="description" content="How Three Cities Social became a Chicago social club built to fight adult loneliness through real connection. This is our story." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/story" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/story" />
+<meta property="og:title" content="Our Story. Three Cities Social, Chicago." />
+<meta property="og:description" content="Why we built Three Cities Social. A letter from the founders on starting Chicago's membership club for real connection." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Our Story. Three Cities Social, Chicago." />
+<meta name="twitter:description" content="Why we built Three Cities Social. A letter from the founders on starting Chicago's membership club for real connection." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2000w" />
+
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Story page */
+.story-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--matte-black-deep);
+  color: var(--off-white);
+  min-height: 70svh;
+  display: flex; align-items: flex-end;
+}
+.story-hero__media { position: absolute; inset: 0; z-index: 0; }
+.story-hero__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.story-hero__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(37,33,30,0.5) 0%, rgba(37,33,30,0.85) 100%);
+}
+.story-hero__inner {
+  position: relative; z-index: 1;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 160px 22px 80px;
+}
+@media (min-width: 720px) { .story-hero__inner { padding: 200px 40px 110px; } }
+@media (min-width: 1100px) { .story-hero__inner { padding: 220px 64px 140px; } }
+.story-hero h1 { color: var(--off-white); max-width: 22ch; }
+.story-hero h1 em { color: var(--autumn-soft); font-style: italic; }
+.story-hero__meta {
+  margin-top: 24px;
+  display: flex; gap: 14px;
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg-inverse-muted);
+  font-weight: 700;
+}
+.story-hero__meta span + span::before {
+  content: "·"; margin-right: 14px; color: var(--fg-inverse-subtle);
+}
+
+.letter {
+  max-width: var(--container-letter);
+  margin: 0 auto;
+  padding: 96px 22px;
+}
+@media (min-width: 720px) { .letter { padding: 128px 40px; } }
+.letter__lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(26px, 3.4vw, 36px);
+  line-height: 1.3;
+  color: var(--fg);
+  margin: 0 0 48px;
+  text-wrap: pretty;
+}
+.letter__lede em { color: var(--accent); }
+.letter p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--fg);
+  margin: 0 0 22px;
+}
+.letter p.muted { color: var(--fg-muted); }
+.letter h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 56px 0 24px;
+  color: var(--fg);
+}
+.letter h2 em { font-style: italic; color: var(--accent); }
+.letter .pullquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(26px, 3.2vw, 34px);
+  line-height: 1.3;
+  color: var(--accent);
+  margin: 48px 0;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent);
+  text-wrap: pretty;
+}
+.letter .sign {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--fg-muted);
+}
+.letter .sign-name {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg);
+  margin-top: 6px;
+}
+
+/* Inline photo bands within the letter */
+.story-band {
+  position: relative;
+  margin: 80px 0;
+}
+.story-band img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.story-band figcaption {
+  margin-top: 14px;
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+  font-weight: 700;
+}
+
+/* Numbers section */
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  text-align: left;
+}
+@media (min-width: 720px) {
+  .numbers { grid-template-columns: repeat(3, 1fr); gap: 64px; }
+}
+.number {
+  padding-top: 28px;
+  border-top: 1px solid var(--line-inverse-strong);
+}
+.section--teal .number { border-top-color: rgba(242,235,224,0.32); }
+.number__value {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(72px, 9vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--off-white);
+}
+.number__label {
+  margin-top: 12px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg-on-teal-muted);
+}
+.number__copy {
+  margin-top: 16px;
+  font-size: 15px;
+  color: var(--fg-on-teal-muted);
+  max-width: 28ch;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Three Cities Social","url":"https://threecitiessocial.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"3","bestRating":"5"},"review":[{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Umama K."},"reviewBody":"This is the only social club in Chicago that understands what it takes to build meaningful friendships. Perfect entry point for anyone curious. Perfect reset button for anyone needing a new second or third place."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Jacqui P."},"reviewBody":"Joining Three Cities Social has been one of the best decisions I've made. It's expanded my social circle, introduced me to new interests, and brought so much into my life."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"A recent member"},"reviewBody":"I'm in my 30s and recently moved from Atlanta. I tried a few other social clubs. This is the only one that delivers on the people, the experiences, and the spaces."}]}</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html" class="is-active">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent">Apply for Membership</a>
+</aside>
+
+<!-- HERO -->
+<section class="story-hero" data-screen-label="02 Story hero">
+  <div class="story-hero__media" aria-hidden="true">
+    <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2500w" alt="Inside the River North clubhouse library" />
+  </div>
+  <div class="story-hero__inner">
+    <span class="eyebrow eyebrow--inverse reveal">Our Story</span>
+    <h1 class="h-display reveal" style="--delay: 80ms; margin-top: 24px;">
+      We built the club <em>we wished existed</em>.
+    </h1>
+    <div class="story-hero__meta reveal" style="--delay: 160ms">
+      <span>A Letter</span><span>From the founders</span><span>Chicago</span>
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<article class="letter">
+  <p class="letter__lede reveal">
+    We moved to Chicago in 2018 not knowing a single person.
+  </p>
+
+  <p class="reveal">
+    We did the thing you are supposed to do. Joined the clubs. Went to the events. Showed up at the bars. We always had a good time. We never built community.
+  </p>
+
+  <p class="muted reveal" style="--delay: 60ms">
+    Turns out we were not the only ones. Making friends as an adult is genuinely hard, and the city does not make it easier. The options are networking that feels transactional, apps that go nowhere, or the same few bars. None of it is built for actual friendship.
+  </p>
+
+  <figure class="story-band reveal">
+    <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2500w" alt="Members around a long table, raising glasses" loading="lazy" />
+    <figcaption>Wicker Park &middot; A Thursday dinner</figcaption>
+  </figure>
+
+  <h2 class="reveal">So we built <em>the thing we wanted</em>.</h2>
+
+  <p class="reveal">
+    Three Cities started with no space and a handful of people who kept showing up. Dinners in apartments. Long walks on Sundays. A group text that turned into a calendar. The first member was a friend, then a friend of a friend, then a stranger who heard about it.
+  </p>
+
+  <p class="muted reveal" style="--delay: 60ms">
+    It is now two clubhouses and a community of adults who actually know each other. River North came first. Wicker Park followed a year later. Both feel like the same club, because they are.
+  </p>
+
+  <p class="pullquote reveal">
+    A community you are part of, not a venue you rent.
+  </p>
+
+  <figure class="story-band reveal">
+    <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2500w" alt="Inside the River North clubhouse" loading="lazy" />
+    <figcaption>River North &middot; The library</figcaption>
+  </figure>
+
+  <h2 class="reveal">Where it is <em>going</em>.</h2>
+
+  <p class="reveal">
+    More places like this, in more cities. But only if every one still feels local, still feels real, still knows your name. The day Three Cities feels like a status club or a polished brand instead of a community, we have failed.
+  </p>
+
+  <p class="muted reveal" style="--delay: 60ms">
+    We are in no rush to add more. The point was never how many we open. It is that each one stays a place where you walk in and someone says hello, by name.
+  </p>
+
+  <p class="reveal" style="--delay: 120ms">
+    If that sounds like something you want, come see it.
+  </p>
+
+  <div class="sign reveal" style="--delay: 180ms">
+    With warmth,<br />
+    <span class="sign-name">The Founders, Three Cities Social</span>
+  </div>
+</article>
+
+<!-- NUMBERS -->
+<section class="section section--teal" data-screen-label="03 By the numbers">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--on-teal">By the numbers</span>
+      <h2 class="h-section" style="color: var(--off-white);">What it adds up to <em>so far</em>.</h2>
+    </div>
+
+    <div class="numbers">
+      <div class="number reveal">
+        <div class="number__value">2018</div>
+        <div class="number__label">Year we moved here</div>
+        <p class="number__copy">Two founders, zero friends in Chicago, one stubborn idea.</p>
+      </div>
+      <div class="number reveal" style="--delay: 100ms">
+        <div class="number__value">2</div>
+        <div class="number__label">Clubhouses</div>
+        <p class="number__copy">River North and Wicker Park. Open 24/7, both yours with one membership.</p>
+      </div>
+      <div class="number reveal" style="--delay: 200ms">
+        <div class="number__value">365</div>
+        <div class="number__label">Days a year</div>
+        <p class="number__copy">Both clubhouses open 24/7. Programming every week, for a community of adults across the city.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section--rule" data-screen-label="04 Reviews">
+  <style>
+    .reviews__head { display:flex; flex-direction:column; gap:18px; margin-bottom:56px; max-width:56ch; }
+    .reviews__grid { display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--line); }
+    @media (min-width:820px){ .reviews__grid { grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); } }
+    .review { padding:40px 0; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:24px; }
+    @media (min-width:820px){ .review { padding:48px 36px 44px 0; border-bottom:0; border-right:1px solid var(--line); } .review+.review{ padding-left:36px; } .review:last-child{ border-right:0; padding-right:0; } }
+    .review__stars { color:var(--accent); font-size:14px; letter-spacing:3px; }
+    .review__text { font-family:var(--font-display); font-size:22px; line-height:1.4; color:var(--fg); margin:0; }
+    .review__attr { margin-top:auto; display:flex; flex-direction:column; gap:4px; font-family:var(--font-sans); font-weight:700; font-size:11px; letter-spacing:var(--tracking-wider); text-transform:uppercase; color:var(--fg-muted); }
+    .review__name { color:var(--fg); }
+  </style>
+  <div class="shell">
+    <div class="reviews__head reveal">
+      <span class="eyebrow eyebrow--accent">From Google</span>
+      <h2 class="h-section">What members say.</h2>
+    </div>
+    <div class="reviews__grid">
+      <figure class="review reveal">
+        <span class="review__stars" aria-label="5 out of 5 stars">★★★★★</span>
+        <blockquote class="review__text">This is the only social club in Chicago that understands what it takes to build meaningful friendships. Perfect entry point for anyone curious. Perfect reset button for anyone needing a new second or third place.</blockquote>
+        <figcaption class="review__attr"><span class="review__name">Umama K.</span><span>Member &middot; December 2024</span></figcaption>
+      </figure>
+      <figure class="review reveal" style="--delay:120ms">
+        <span class="review__stars" aria-label="5 out of 5 stars">★★★★★</span>
+        <blockquote class="review__text">Joining Three Cities Social has been one of the best decisions I&rsquo;ve made. It&rsquo;s expanded my social circle, introduced me to new interests, and brought so much into my life.</blockquote>
+        <figcaption class="review__attr"><span class="review__name">Jacqui P.</span><span>Member &middot; June 2025</span></figcaption>
+      </figure>
+      <figure class="review reveal" style="--delay:240ms">
+        <span class="review__stars" aria-label="5 out of 5 stars">★★★★★</span>
+        <blockquote class="review__text">I&rsquo;m in my 30s and recently moved from Atlanta. I tried a few other social clubs. This is the only one that delivers on the people, the experiences, and the spaces.</blockquote>
+        <figcaption class="review__attr"><span class="review__name">A recent member</span><span>Atlanta to Chicago</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSER -->
+<section class="section" data-screen-label="05 Closer">
+  <div class="shell shell--narrow" style="text-align: center;">
+    <div class="reveal" style="display:flex; flex-direction: column; gap: 28px; align-items: center;">
+      <span class="eyebrow eyebrow--accent">Membership</span>
+      <h2 class="h-section">Come see it for <em>yourself</em>.</h2>
+      <p class="lede" style="text-align: center; margin: 0 auto;">Apply for membership, or book a tour and meet the team in person.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 8px;">
+        <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+        <a href="../join.html" class="btn btn--ghost btn--lg">Book a Tour</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="locations.html#river-north">River North<br/>320 W. Ohio St</a>
+        <a href="locations.html#wicker-park" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="index.html#programming">Programming</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

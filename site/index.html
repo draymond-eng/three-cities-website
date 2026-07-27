@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Three Cities Social | A Social Club in Chicago for Real Friends</title>
+<meta name="description" content="Three Cities Social is a social club in Chicago built around connection. Two clubhouses in River North and Wicker Park, programming every week. Apply to join." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/" />
+<meta property="og:title" content="Three Cities Social | A Social Club in Chicago for Real Friends" />
+<meta property="og:description" content="Three Cities Social is a social club in Chicago built around connection. Two clubhouses in River North and Wicker Park, programming every week. Apply to join." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Three Cities Social. A Membership Club in Chicago." />
+<meta name="twitter:description" content="A community for adults who want real friends in Chicago. Two clubhouses, programming every week. Apply for membership." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2000w" />
+
+
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+/* ====== Page-specific styles ====== */
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 92svh;
+  display: flex;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--matte-black-deep);
+  margin-top: -88px; /* slide hero up under the transparent nav */
+}
+.hero::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 140px;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(37,33,30,0.55) 0%, rgba(37,33,30,0) 100%);
+}
+.hero__media { position: absolute; inset: 0; z-index: 0; }
+.hero__media img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0.85;
+}
+.hero__media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(37,33,30,0.30) 0%, rgba(37,33,30,0.20) 30%, rgba(37,33,30,0.78) 80%, rgba(37,33,30,0.96) 100%);
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 140px 22px 64px;
+  max-width: var(--container);
+  margin: 0 auto;
+  color: var(--off-white);
+}
+@media (min-width: 720px)  { .hero__inner { padding: 180px 40px 96px; } }
+@media (min-width: 1100px) { .hero__inner { padding: 200px 64px 120px; } }
+.hero__eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--off-white);
+  display: inline-flex; align-items: center; gap: 14px;
+  margin-bottom: 36px;
+}
+.hero__eyebrow::before {
+  content: ""; width: 32px; height: 1px; background: var(--autumn-soft);
+}
+.hero__headline {
+  color: var(--off-white);
+  max-width: 22ch;
+  font-size: clamp(40px, 5.5vw, 76px);
+  line-height: 1.04;
+}
+.hero__headline em { color: var(--autumn-soft); font-style: italic; }
+.hero__sub {
+  margin-top: 36px;
+  color: var(--fg-inverse-muted);
+  max-width: 52ch;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(17px, 1.7vw, 20px);
+  line-height: 1.6;
+}
+.hero__actions {
+  margin-top: 48px;
+  display: flex; flex-wrap: wrap; gap: 14px;
+  align-items: center;
+}
+.hero__caption {
+  position: absolute;
+  left: 22px; bottom: 24px;
+  z-index: 3;
+  font-size: 10px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(224,212,200,0.55);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  display: flex; align-items: center; gap: 12px;
+}
+@media (min-width: 720px) { .hero__caption { left: 40px; bottom: 32px; } }
+.hero__caption::before {
+  content: ""; width: 20px; height: 1px; background: rgba(224,212,200,0.4);
+}
+
+/* Story snippet */
+.story-snippet {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 900px) {
+  .story-snippet {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 96px;
+    align-items: start;
+  }
+}
+.story-snippet__left { display: flex; flex-direction: column; gap: 24px; }
+.story-snippet__right { display: flex; flex-direction: column; gap: 32px; }
+.story-snippet__right p { font-size: 19px; line-height: 1.7; }
+.story-snippet__right p + p { margin-top: 6px; }
+.story-snippet .h-sub em { font-style: normal; color: var(--accent); font-weight: 400; }
+
+/* What it is — three column */
+.threecol {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 760px) { .threecol { grid-template-columns: repeat(3, 1fr); gap: 48px; } }
+.facet {
+  display: flex; flex-direction: column; gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-strong);
+}
+.facet__num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--accent);
+  line-height: 1;
+}
+.facet__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin: 0;
+}
+.facet__copy { color: var(--fg-muted); font-size: 16px; max-width: 30ch; }
+
+/* Five pillars */
+.pillars { border-top: 1px solid var(--line); }
+.pillar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.pillar__index {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.pillar__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(34px, 7vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+  margin: 0;
+}
+.pillar__copy {
+  font-size: 16px;
+  color: var(--fg-muted);
+  max-width: 56ch;
+  line-height: 1.6;
+}
+@media (min-width: 760px) {
+  .pillar {
+    grid-template-columns: 80px 220px 1fr;
+    gap: 48px;
+    align-items: baseline;
+    padding: 36px 0;
+  }
+  .pillar__name { font-size: clamp(40px, 4.6vw, 56px); }
+  .pillar__copy { font-size: 17px; }
+}
+
+/* Clubhouses preview */
+.clubhouses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 900px) {
+  .clubhouses { grid-template-columns: 1fr 1fr; gap: 48px; }
+}
+.clubhouse { display: flex; flex-direction: column; gap: 22px; }
+.clubhouse__photo {
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-700);
+  display: block;
+  text-decoration: none;
+  border: 0;
+}
+.clubhouse__photo img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 720ms var(--ease-out);
+}
+.clubhouse:hover .clubhouse__photo img { transform: scale(1.025); }
+.clubhouse__body { display: flex; flex-direction: column; gap: 10px; }
+.clubhouse__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.clubhouse__addr {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.clubhouse__copy {
+  font-size: 16px;
+  color: var(--fg-muted);
+  max-width: 38ch;
+}
+
+/* Testimonials */
+.quotes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 820px) { .quotes { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+.quote {
+  display: flex; flex-direction: column; gap: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-inverse-strong);
+}
+.quote__text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--off-white);
+  margin: 0;
+  text-wrap: pretty;
+  font-style: italic;
+}
+.quote__attr {
+  display: flex; flex-direction: column; gap: 4px;
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg-inverse-subtle);
+  font-weight: 700;
+  margin-top: auto;
+}
+.quote__name { color: var(--off-white); font-size: 12px; letter-spacing: var(--tracking-wider); }
+
+/* This week ticker */
+.ticker__head {
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+/* Typographic event card (no photo, no meta line). Date + title only.
+   Cards stretch to equal height so the three sit on a clean grid. */
+.event-card--text {
+  padding-top: 12px;
+  min-height: 220px;
+}
+.event-card--text .event-card__body {
+  padding: 40px 32px 44px;
+  gap: 14px;
+  justify-content: flex-start;
+}
+.event-card--text .event-card__day {
+  font-size: 16px;
+}
+.event-card--text .event-card__title {
+  font-size: clamp(30px, 3.2vw, 38px);
+  line-height: 1.05;
+}
+.event-card__title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  transition: color 220ms;
+}
+.event-card__title a:hover { color: var(--accent); }
+.event-card__rsvp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border: 0;
+  margin-top: 14px;
+  align-self: flex-start;
+  transition: opacity 220ms;
+}
+.event-card__rsvp:hover { opacity: 0.7; }
+.event-card__rsvp .arrow { transition: transform 280ms var(--ease-out); }
+.event-card__rsvp:hover .arrow { transform: translateX(4px); }
+@media (min-width: 760px) {
+  .event-card--text { min-height: 260px; }
+}
+
+/* Programming cards — 3-column grid with photo at top.
+   Mobile: 1 column. Tablet+: 3 columns. */
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 760px) {
+  .event-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+}
+.event-card {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  transition: transform 320ms var(--ease-out), background 220ms;
+}
+.event-card:hover { transform: translateY(-2px); background: var(--paper-50); }
+.event-card__photo {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--ink-700);
+  overflow: hidden;
+}
+.event-card__photo img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 720ms var(--ease-out);
+}
+.event-card:hover .event-card__photo img { transform: scale(1.03); }
+.event-card__photo--placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(ellipse at 35% 35%, rgba(183,153,122,0.35) 0%, transparent 55%),
+    linear-gradient(160deg, var(--matte-gold), var(--matte-black));
+  color: var(--off-white);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 16px;
+  opacity: 0.85;
+}
+.event-card__body {
+  padding: 24px 26px 28px;
+  display: flex; flex-direction: column; gap: 12px;
+  flex: 1;
+}
+.event-card__day {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--accent);
+}
+.event-card__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin: 0;
+}
+.event-card__copy {
+  font-size: 14px;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}
+.event-card__meta {
+  display: flex; flex-wrap: wrap; gap: 6px 14px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+  margin-top: auto;
+  padding-top: 8px;
+}
+.event-card__meta span + span::before {
+  content: "·"; margin-right: 12px; color: var(--fg-faint);
+}
+
+/* Gallery — vertical only. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  grid-auto-flow: dense;
+}
+@media (min-width: 760px)  { .gallery { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+@media (min-width: 1100px) { .gallery { gap: 20px; } }
+.gallery figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  background: var(--ink-700);
+  aspect-ratio: 3/4;
+}
+.gallery img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 720ms var(--ease-out);
+}
+.gallery figure:hover img { transform: scale(1.03); }
+/* Occasional taller portrait variant for rhythm. */
+.gallery .g-tall { aspect-ratio: 3/5; }
+@media (max-width: 759px) {
+  .gallery .g-tall { aspect-ratio: 3/4; }
+}
+
+/* Membership */
+.membership {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (min-width: 880px) {
+  .membership {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 96px;
+  }
+}
+.membership__left { display: flex; flex-direction: column; gap: 32px; }
+.price {
+  display: flex; align-items: baseline; gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+}
+.price__amount { font-size: clamp(80px, 12vw, 144px); line-height: 0.9; }
+.price__unit {
+  font-size: 18px; color: var(--fg-muted); letter-spacing: 0;
+  font-family: var(--font-sans); font-weight: 400;
+}
+.price-couple {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: -8px;
+}
+.benefits {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+.benefits li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+  color: var(--fg);
+  display: flex; gap: 18px;
+  align-items: baseline;
+}
+.benefits li .benefit-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+  width: 22px;
+}
+
+/* Closing CTA */
+.closer {
+  position: relative;
+  min-height: 80svh;
+  display: flex;
+  align-items: center; justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--matte-black-deep);
+  color: var(--off-white);
+  text-align: center;
+}
+.closer__media { position: absolute; inset: 0; z-index: 0; }
+.closer__media img {
+  width: 100%; height: 100%; object-fit: cover; opacity: 0.45;
+}
+.closer__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(37,33,30,0.55), rgba(37,33,30,0.88));
+}
+.closer__inner {
+  position: relative; z-index: 1;
+  max-width: 760px;
+  padding: 0 22px;
+  display: flex; flex-direction: column; gap: 32px;
+  align-items: center;
+}
+.closer .h-section { color: var(--off-white); }
+.closer .h-section em { color: var(--autumn-soft); }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Three Cities Social","alternateName":"Three Cities Social Club","url":"https://threecitiessocial.com","logo":"https://threecitiessocial.com/assets/logos/wordmark-wide-black.png","description":"A membership club in Chicago, built around real connection. Two clubhouses, programming every week.","sameAs":["https://instagram.com/threecitiessocial"],"location":[{"@type":"Place","name":"Three Cities Social - River North","address":{"@type":"PostalAddress","streetAddress":"320 W. Ohio St","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60654","addressCountry":"US"}},{"@type":"Place","name":"Three Cities Social - Wicker Park","address":{"@type":"PostalAddress","streetAddress":"1643 N. Milwaukee Ave","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60647","addressCountry":"US"}}],"contactPoint":{"@type":"ContactPoint","email":"hello@threecitiessocial.com","contactType":"Customer Service"}}</script>
+</head>
+<body>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav nav--over-hero" id="site-nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img class="nav__logo--dark"  src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+      <img class="nav__logo--cream" src="../assets/logos/wordmark-wide-cream.png" alt="" aria-hidden="true" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent">Apply for Membership</a>
+</aside>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top" data-screen-label="02 Hero">
+  <div class="hero__media" aria-hidden="true">
+    <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2500w" alt="Members raising glasses around a long table" />
+  </div>
+
+  <div class="hero__inner">
+    <h1 class="h-display hero__headline reveal" style="--delay: 80ms">
+      A social club in Chicago, built for <em>real friendship</em>.
+    </h1>
+    <p class="hero__sub reveal" style="--delay: 160ms">
+      Three Cities Social is a social club in Chicago built around connection. Two clubhouses, in River North and Wicker Park, open every day, with programming every week. It runs as an adult social club for people who want real friends, not more contacts.
+    </p>
+    <div class="hero__actions reveal" style="--delay: 240ms">
+      <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+      <a href="story.html" class="btn btn--ghost-inverse btn--lg">Read Our Story</a>
+    </div>
+  </div>
+
+  <!-- Hero caption removed per content cleanup. -->
+</section>
+
+<!-- ============================== STORY SNIPPET ============================== -->
+<!-- Removed: the story now lives on /story.html so the homepage can earn its way to the CTA faster. -->
+
+<!-- ============================== PROGRAMMING (dynamic) ============================== -->
+<section class="section" id="programming" data-screen-label="08 Programming">
+  <div class="shell">
+    <div class="ticker__head reveal">
+      <div class="lockup">
+        <span class="eyebrow eyebrow--accent">Programming</span>
+        <h2 class="h-section" style="margin-top: 14px;">What&rsquo;s on <em>the calendar</em>.</h2>
+      </div>
+      <a href="events.html" class="link-arrow">See the full calendar <span class="arrow">→</span></a>
+    </div>
+
+    <!-- Populated from events.js. Three upcoming events, one per pillar where possible. -->
+    <div class="event-grid" id="home-programming"></div>
+  </div>
+</section>
+
+
+<!-- ============================== WHAT IT IS ============================== -->
+<section class="section section--rule" data-screen-label="04 What it is">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">What it is</span>
+      <h2 class="h-section">A clubhouse, a calendar, <em>a circle of people</em>.</h2>
+    </div>
+
+    <div class="threecol">
+      <article class="facet reveal">
+        <span class="facet__num">i.</span>
+        <h3 class="facet__title">Part social club, part coworking.</h3>
+        <p class="facet__copy">The clubhouses stay open around the clock to gather, host, or get work done. It works like a coworking social club, where the people at the next table are members you will actually get to know.</p>
+      </article>
+      <article class="facet reveal" style="--delay: 100ms">
+        <span class="facet__num">ii.</span>
+        <h3 class="facet__title">Where members meet people in Chicago.</h3>
+        <p class="facet__copy">Dinners, talks, run club, volunteer days, and member nights. The kind of calendar that turns into actual friendships, not more contacts.</p>
+      </article>
+      <article class="facet reveal" style="--delay: 200ms">
+        <span class="facet__num">iii.</span>
+        <h3 class="facet__title">Membership, by application.</h3>
+        <p class="facet__copy">Social club membership in Chicago, reviewed by application. One rate, both clubhouses, every program on the calendar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FIVE PILLARS ============================== -->
+<section class="section section--rule" data-screen-label="05 Pillars">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">Five Pillars</span>
+      <h2 class="h-section">Five ways <em>we build</em> connection.</h2>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pillar__index">i.</div>
+        <div class="pillar__name">Move</div>
+        <p class="pillar__copy">Runs, workouts, and movement classes. Doing hard things together is the fastest way to actually know somebody.</p>
+      </article>
+      <article class="pillar reveal" style="--delay: 80ms">
+        <div class="pillar__index">ii.</div>
+        <div class="pillar__name">Play</div>
+        <p class="pillar__copy">Pickleball, game nights, ping pong tournaments, pool table standoffs. Friendship in low stakes.</p>
+      </article>
+      <article class="pillar reveal" style="--delay: 160ms">
+        <div class="pillar__index">iii.</div>
+        <div class="pillar__name">Talk</div>
+        <p class="pillar__copy">Dinners, talks, and conversations that go past small talk. Long tables, real questions, no phones.</p>
+      </article>
+      <article class="pillar reveal" style="--delay: 240ms">
+        <div class="pillar__index">iv.</div>
+        <div class="pillar__name">Social</div>
+        <p class="pillar__copy">Member nights, parties, open hangs. The default plan for a Friday, hosted by people you know.</p>
+      </article>
+      <article class="pillar reveal" style="--delay: 320ms">
+        <div class="pillar__index">v.</div>
+        <div class="pillar__name">Serve</div>
+        <p class="pillar__copy">Volunteer days and community work. Chicago is the third member of every friendship here.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CLUBHOUSES ============================== -->
+<section class="section section--rule" id="clubhouses" data-screen-label="06 Clubhouses">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">Two Chapters, One Club</span>
+      <h2 class="h-section">Two clubhouses, <em>River North and Wicker Park</em>.</h2>
+    </div>
+
+    <div class="clubhouses">
+      <article class="clubhouse reveal">
+        <a href="river-north.html" class="clubhouse__photo" aria-label="River North">
+          <img src="../uploads/compressed_A7400003-HDR.jpg" alt="Inside the River North clubhouse, with the lounge and Chicago map mural"th bookshelves and lounge chairs" loading="lazy" />
+        </a>
+        <div class="clubhouse__body">
+          <h3 class="clubhouse__name">River North</h3>
+          <span class="clubhouse__addr">320 W. Ohio St &middot; Chicago</span>
+          <p class="clubhouse__copy">Our original location. BYOB lounges, a long dining table, private offices, and open workspace. Open 24/7.</p>
+          <a href="river-north.html" class="link-arrow" style="align-self:flex-start; margin-top:8px;">Social club in River North <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="clubhouse reveal" style="--delay: 100ms">
+        <a href="wicker-park.html" class="clubhouse__photo" aria-label="Wicker Park">
+          <img src="../uploads/3%20Cities-077.jpg" alt="The outdoor terrace at the Wicker Park clubhouse with the Chicago skyline behind" loading="lazy" />
+        </a>
+        <div class="clubhouse__body">
+          <h3 class="clubhouse__name">Wicker Park</h3>
+          <span class="clubhouse__addr">1643 N. Milwaukee Ave &middot; Chicago</span>
+          <p class="clubhouse__copy">Our newest location. Outdoor terrace, pool table, home gym, boardroom, dining room, and open workspace.</p>
+          <a href="wicker-park.html" class="link-arrow" style="align-self:flex-start; margin-top:8px;">Social club in Wicker Park <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== GALLERY ============================== -->
+<section class="section section--rule" data-screen-label="08b Gallery">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">A Look Around</span>
+      <h2 class="h-section">What it <em>actually looks like</em>.</h2>
+    </div>
+
+    <!-- Curated, people-only. Vertical orientation only. No duplicates. -->
+    <div class="gallery reveal">
+      <figure class="g-tall"><img src="../uploads/3Cities%20Grand%20Opening-33.jpg" alt="Member laughing at the pool table" loading="lazy" /></figure>
+      <figure><img src="../uploads/TC%20Happy%20Hour-17%20%281%29.jpg" alt="Two members in conversation" loading="lazy" /></figure>
+      <figure><img src="../uploads/TC%20Nov%20Event-43.jpg" alt="Members raising glasses at a dinner" loading="lazy" /></figure>
+      <figure class="g-tall"><img src="../uploads/TC%20Happy%20Hour-28%20%281%29.jpg" alt="Members mid-laugh at happy hour" loading="lazy" /></figure>
+
+      <figure><img src="../uploads/TC-052.jpg" alt="A panel conversation with the Chicago mural behind" loading="lazy" /></figure>
+      <figure><img src="../uploads/3Cities%202-11-85.jpg" alt="Two members dancing" loading="lazy" /></figure>
+      <figure><img src="../uploads/TC%20Happy%20Hour-07.jpg" alt="A member ordering a drink at the bar" loading="lazy" /></figure>
+      <figure class="g-tall"><img src="../uploads/TC-086.jpg" alt="Three members talking around a table" loading="lazy" /></figure>
+
+      <figure><img src="../uploads/3Cities%20Grand%20Opening-45.jpg" alt="Three members together at the bar" loading="lazy" /></figure>
+      <figure><img src="../uploads/3Cities%20Grand%20Opening-50.jpg" alt="A member in conversation" loading="lazy" /></figure>
+      <figure><img src="../uploads/3cities_trivia-32.jpg" alt="Members laughing on the couch" loading="lazy" /></figure>
+      <figure class="g-tall"><img src="../uploads/TC-095.jpg" alt="A member working on a laptop in the lounge" loading="lazy" /></figure>
+
+      <figure><img src="../uploads/TC%20Nov%20Event-61%20%281%29.jpg" alt="A member throwing darts in the library" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TESTIMONIALS ============================== -->
+<section class="section section--dark" data-screen-label="07 Testimonials">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--inverse">Members</span>
+      <h2 class="h-section" style="color: var(--off-white);">From people who <em>actually use it</em>.</h2>
+    </div>
+
+    <div class="quotes">
+      <figure class="quote reveal">
+        <blockquote class="quote__text">This is the only social club in Chicago that understands what it takes to build meaningful friendships. Perfect entry point for anyone curious. Perfect reset button for anyone needing a new second or third place.</blockquote>
+        <figcaption class="quote__attr">
+          <span class="quote__name">Umama K.</span>
+          <span>Member &middot; December 2024</span>
+        </figcaption>
+      </figure>
+      <figure class="quote reveal" style="--delay: 120ms">
+        <blockquote class="quote__text">Joining Three Cities Social has been one of the best decisions I&rsquo;ve made. It&rsquo;s expanded my social circle, introduced me to new interests, and brought so much joy into my life. The events are fun, welcoming, and full of amazing people.</blockquote>
+        <figcaption class="quote__attr">
+          <span class="quote__name">Jacqui P.</span>
+          <span>Member &middot; June 2025</span>
+        </figcaption>
+      </figure>
+      <figure class="quote reveal" style="--delay: 240ms">
+        <blockquote class="quote__text">I&rsquo;m in my 30s and recently moved from Atlanta. I tried a few other social clubs. This is the only one that delivers on the people, the experiences, and the spaces. The members share the same values, wanting to connect on a deeper level and enjoy everything Chicago has to offer.</blockquote>
+        <figcaption class="quote__attr">
+          <span class="quote__name">A recent member</span>
+          <span>Atlanta to Chicago</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================== MEMBERSHIP ============================== -->
+<section class="section section--rule" id="membership" data-screen-label="09 Membership">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">Membership</span>
+      <h2 class="h-section">One membership. <em>Full access.</em></h2>
+    </div>
+
+    <div class="membership">
+      <div class="membership__left reveal">
+        <div class="price">
+          <span class="price__amount">$249</span>
+          <span class="price__unit">/ month</span>
+        </div>
+        <span class="price-couple">Couples &middot; $299 / month</span>
+        <p class="p-large p-muted" style="max-width: 38ch;">
+          One rate. Both clubhouses. Most programs on the calendar. No initiation fee. Month to month.
+        </p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top: 8px;">
+          <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+          <a href="membership.html" class="btn btn--ghost btn--lg">See What is Included</a>
+        </div>
+      </div>
+
+      <ul class="benefits reveal" style="--delay: 100ms">
+        <li><span class="benefit-num">i.</span> Daily access to both clubhouses.</li>
+        <li><span class="benefit-num">ii.</span> Most weekly programming included.</li>
+        <li><span class="benefit-num">iii.</span> Bring two guests at any time, at no extra cost.</li>
+        <li><span class="benefit-num">iv.</span> Member directory and intros.</li>
+        <li><span class="benefit-num">v.</span> Host your own gatherings at the clubhouses.</li>
+        <li><span class="benefit-num">vi.</span> Reciprocal access as we open in more cities.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CLOSER ============================== -->
+<section class="closer" data-screen-label="10 Closer">
+  <div class="closer__media" aria-hidden="true">
+    <img src="../uploads/3cities_trivia-32.jpg" alt="" />
+  </div>
+  <div class="closer__inner reveal">
+    <span class="eyebrow eyebrow--inverse" style="color: rgba(246,240,226,0.8);">Come See It</span>
+    <h2 class="h-section">Words can only do <em>so much</em>.</h2>
+    <p class="lede lede--inverse" style="text-align: center; margin: 0 auto;">Apply for membership, or book a tour and meet the team in person.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 8px;">
+      <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+      <a href="../join.html" class="btn btn--ghost-inverse btn--lg">Book a Tour</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" data-screen-label="11 Footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses with programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="locations.html#river-north">River North<br/>320 W. Ohio St</a>
+        <a href="locations.html#wicker-park" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="events.html">Programming</a>
+        <a href="networking-events-chicago.html">Networking events in Chicago</a>
+        <a href="host.html">Venue Rental</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  // Toggle the transparent-over-hero header state based on scroll position.
+  // Solidifies once the user scrolls past ~80% of the hero height so the
+  // transition completes before the nav lands on lighter content.
+  var nav = document.getElementById('site-nav');
+  var hero = document.querySelector('.hero');
+  if (!nav || !hero) return;
+  function update() {
+    var threshold = hero.offsetHeight - 80;
+    if (window.scrollY < threshold) nav.classList.add('nav--over-hero');
+    else nav.classList.remove('nav--over-hero');
+  }
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+})();
+</script>
+
+<script src="events.js"></script>
+<script>
+(function () {
+  'use strict';
+  var root = document.getElementById('home-programming');
+  var H = window.TCS_EVENT_HELPERS;
+  if (!root || !H || !window.TCS_EVENTS) return;
+  var picked = H.pickHomepage(new Date(), 3);
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+    });
+  }
+  var html = '';
+  picked.forEach(function (e) {
+    var d = H.parseDate(e);
+    html += '<article class="event-card event-card--text">';
+    html +=   '<div class="event-card__body">';
+    html +=     '<span class="event-card__day">' + esc(H.dayName(d)) + ', ' + esc(H.monthName(d)) + ' ' + d.getDate() + '</span>';
+    var titleHtml = e.rsvp
+      ? '<a href="' + esc(e.rsvp) + '" target="_blank" rel="noopener">' + esc(e.title) + '.</a>'
+      : esc(e.title) + '.';
+    html +=     '<h3 class="event-card__title">' + titleHtml + '</h3>';
+    if (e.rsvp) {
+      html +=   '<a class="event-card__rsvp" href="' + esc(e.rsvp) + '" target="_blank" rel="noopener">RSVP via Luma <span class="arrow">→</span></a>';
+    }
+    html +=   '</div>';
+    html += '</article>';
+  });
+  if (!html) html = '<p style="font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--fg-muted);">The calendar is between drops. Check <a href="events.html" class="link">the full calendar</a> for what is coming.</p>';
+  root.innerHTML = html;
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+  // Mobile drawer
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function openDrawer()  { drawer.classList.add('is-open'); drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeDrawer() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true'); toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
+  if (closeBtn)  closeBtn.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeDrawer); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
+  });
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

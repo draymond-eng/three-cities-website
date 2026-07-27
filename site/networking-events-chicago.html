@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Networking Events in Chicago | Three Cities Social</title>
+<meta name="description" content="Networking events in Chicago that do not feel like networking. Dinners, talks, and member nights at our River North and Wicker Park clubhouses. Meet people for real." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/networking-events-chicago" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/networking-events-chicago" />
+<meta property="og:title" content="Networking Events in Chicago | Three Cities Social" />
+<meta property="og:description" content="Networking events in Chicago that do not feel like networking. Dinners, talks, and member nights at our two clubhouses." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Networking Events in Chicago. Three Cities Social." />
+<meta name="twitter:description" content="Networking events in Chicago that do not feel like networking. Dinners, talks, and member nights at our two clubhouses." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2000w" />
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+.page-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--matte-black-deep); color: var(--off-white);
+  min-height: 64svh; display: flex; align-items: flex-end;
+}
+.page-hero__media { position: absolute; inset: 0; z-index: 0; }
+.page-hero__media img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; object-position: center 40%; }
+.page-hero__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(37,33,30,0.5) 0%, rgba(37,33,30,0.85) 100%);
+}
+.page-hero__inner {
+  position: relative; z-index: 1; width: 100%;
+  max-width: var(--container); margin: 0 auto;
+  padding: 150px 22px 72px;
+}
+@media (min-width: 720px) { .page-hero__inner { padding: 190px 40px 100px; } }
+@media (min-width: 1100px) { .page-hero__inner { padding: 210px 64px 120px; } }
+.page-hero h1 { color: var(--off-white); max-width: 20ch; }
+.page-hero h1 em { font-style: italic; color: var(--autumn-soft); }
+.page-hero__sub {
+  margin-top: 28px; max-width: 52ch;
+  font-family: var(--font-display); font-style: normal; font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 26px); line-height: 1.45; color: var(--fg-inverse-muted);
+}
+.page-hero__actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Intro measure */
+.measure {
+  max-width: var(--container-letter);
+}
+.measure p { font-size: 19px; line-height: 1.75; color: var(--fg); margin: 0 0 22px; }
+.measure p.muted { color: var(--fg-muted); }
+
+/* Format list reuse from pillars */
+.formats { border-top: 1px solid var(--line); }
+.format {
+  display: grid; grid-template-columns: 1fr; gap: 10px;
+  padding: 32px 0; border-bottom: 1px solid var(--line); align-items: start;
+}
+.format__index {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 16px; color: var(--accent); letter-spacing: 0.02em;
+}
+.format__name {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(30px, 4vw, 44px); line-height: 1; letter-spacing: -0.015em; color: var(--fg);
+}
+.format__copy { font-size: 16px; color: var(--fg-muted); max-width: 56ch; line-height: 1.6; }
+@media (min-width: 760px) {
+  .format { grid-template-columns: 80px 260px 1fr; gap: 48px; align-items: baseline; padding: 40px 0; }
+}
+
+/* Upcoming list */
+.upcoming { border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+.upcoming__item {
+  display: grid; grid-template-columns: 1fr; gap: 6px;
+  padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline;
+}
+.upcoming__item:last-child { border-bottom: 0; }
+.upcoming__date {
+  display: inline-flex; align-items: baseline; gap: 12px; font-family: var(--font-sans);
+}
+.upcoming__dow {
+  font-weight: 700; font-size: 11px; letter-spacing: var(--tracking-widest);
+  text-transform: uppercase; color: var(--accent); width: 36px;
+}
+.upcoming__num { font-family: var(--font-display); font-weight: 400; font-size: 30px; line-height: 1; color: var(--fg); }
+.upcoming__mon { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--fg-muted); }
+.upcoming__title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(24px, 3vw, 36px); line-height: 1.1; letter-spacing: -0.01em; color: var(--fg); margin: 0;
+}
+@media (min-width: 760px) { .upcoming__item { grid-template-columns: 240px 1fr; gap: 48px; padding: 36px 0; } }
+
+.closer-band { background: var(--bg-sunken); }
+.closer-band h2 { margin: 0 auto; max-width: 18ch; }
+.closer-band p { margin: 16px auto 28px; max-width: 44ch; }
+</style>
+</head>
+<body>
+
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent" style="margin-top: 24px; align-self: flex-start;">Apply for Membership</a>
+</aside>
+
+<!-- HERO -->
+<section class="page-hero" data-screen-label="02 Hero">
+  <div class="page-hero__media" aria-hidden="true">
+    <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2500w" alt="Members at a long-table dinner in Chicago" />
+  </div>
+  <div class="page-hero__inner">
+    <span class="eyebrow eyebrow--inverse reveal">Networking Events in Chicago</span>
+    <h1 class="h-display reveal" style="--delay: 80ms; margin-top: 24px;">
+      Networking events in Chicago, <em>without the networking</em>.
+    </h1>
+    <p class="page-hero__sub reveal" style="--delay: 160ms">
+      Most networking events in Chicago feel like trading business cards. Ours feel like dinner with people you are glad you met.
+    </p>
+    <div class="page-hero__actions reveal" style="--delay: 240ms">
+      <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+      <a href="events.html" class="btn btn--ghost-inverse btn--lg">See the Calendar</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section" data-screen-label="03 Intro">
+  <div class="shell shell--narrow">
+    <div class="measure reveal">
+      <p>Three Cities Social is a <a href="index.html" class="link">Chicago social club</a> with two clubhouses, in River North and Wicker Park. A good share of what we do is, on paper, networking. Dinners where you meet someone in a field you have always been curious about. Talks where the person next to you turns out to run the thing you have been reading about. Member nights where the only agenda is the room.</p>
+      <p class="muted">We just do not run it like networking. No name tags, no elevator pitches, no working the room. The connections happen because the evening is good, not because anyone is trying to make them happen. That is the whole idea behind a social club built for adults who want real friends and useful people in their corner.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="section section--rule" data-screen-label="04 Formats">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">The Formats</span>
+      <h2 class="h-section">Where the <em>real introductions</em> happen.</h2>
+    </div>
+    <div class="formats">
+      <article class="format reveal">
+        <div class="format__index">i.</div>
+        <div class="format__name">Member dinners</div>
+        <p class="format__copy">Long tables, a dozen seats, one host. You sit next to a stranger and leave with two new people worth knowing. The most reliable networking event in Chicago that never calls itself one.</p>
+      </article>
+      <article class="format reveal" style="--delay: 80ms">
+        <div class="format__index">ii.</div>
+        <div class="format__name">Talks and lunches</div>
+        <p class="format__copy">Founders, operators, writers, and makers, talking about the work and taking real questions. Community events in River North and Wicker Park, built for people who want substance over small talk.</p>
+      </article>
+      <article class="format reveal" style="--delay: 160ms">
+        <div class="format__index">iii.</div>
+        <div class="format__name">Member nights</div>
+        <p class="format__copy">Open hangs, happy hours, and parties across both clubhouses. The low-pressure way to meet people in Chicago, week after week, until the room starts to feel like yours.</p>
+      </article>
+      <article class="format reveal" style="--delay: 240ms">
+        <div class="format__index">iv.</div>
+        <div class="format__name">Move and play</div>
+        <p class="format__copy">Run club, pickleball, beach volleyball, game nights. Doing something together beats standing around a high-top. Some of the strongest connections here started over a scorecard.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING (dynamic, filtered to Talk + Social) -->
+<section class="section section--rule" data-screen-label="05 Upcoming">
+  <div class="shell">
+    <div class="ticker__head reveal">
+      <div class="lockup">
+        <span class="eyebrow eyebrow--accent">Coming Up</span>
+        <h2 class="h-section" style="margin-top: 14px;">Next on <em>the calendar</em>.</h2>
+      </div>
+      <a href="events.html" class="link-arrow">See everything <span class="arrow">→</span></a>
+    </div>
+    <div class="upcoming" id="upcoming-list"></div>
+  </div>
+</section>
+
+<!-- CLOSER -->
+<section class="section closer-band" data-screen-label="06 Closer">
+  <div class="shell shell--narrow" style="text-align: center;">
+    <span class="eyebrow eyebrow--accent reveal">Membership</span>
+    <h2 class="h-section reveal" style="--delay: 80ms; margin-top: 14px;">Stop networking. <em>Start belonging.</em></h2>
+    <p class="lede reveal" style="--delay: 160ms; text-align: center; margin: 16px auto 0;">Social club membership in Chicago, by application. Come see a clubhouse first if you like.</p>
+    <div class="reveal" style="--delay: 240ms; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 32px;">
+      <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+      <a href="../join.html" class="btn btn--ghost btn--lg">Book a Tour</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="locations.html#river-north">River North<br/>320 W. Ohio St</a>
+        <a href="locations.html#wicker-park" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="events.html">Programming</a>
+        <a href="host.html">Venue Rental</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="events.js"></script>
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  // Upcoming: pull Talk + Social events from events.js, next 6.
+  var H = window.TCS_EVENT_HELPERS;
+  var root = document.getElementById('upcoming-list');
+  if (H && window.TCS_EVENTS && root) {
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+      });
+    }
+    var now = new Date();
+    var list = window.TCS_EVENTS
+      .filter(function (e) { return (e.pillar === 'Talk' || e.pillar === 'Social') && H.parseDate(e) >= now; })
+      .sort(function (a, b) { return H.parseDate(a) - H.parseDate(b); })
+      .slice(0, 6);
+    if (!list.length) {
+      // Fall back to any upcoming events.
+      list = window.TCS_EVENTS
+        .filter(function (e) { return H.parseDate(e) >= now; })
+        .sort(function (a, b) { return H.parseDate(a) - H.parseDate(b); })
+        .slice(0, 6);
+    }
+    var html = '';
+    list.forEach(function (e) {
+      var d = H.parseDate(e);
+      html += '<article class="upcoming__item">';
+      html +=   '<span class="upcoming__date">';
+      html +=     '<span class="upcoming__dow">' + esc(H.shortDay(d)) + '</span>';
+      html +=     '<span class="upcoming__num">' + d.getDate() + '</span>';
+      html +=     '<span class="upcoming__mon">' + esc(H.monthName(d).slice(0,3)) + '</span>';
+      html +=   '</span>';
+      html +=   '<h3 class="upcoming__title">' + esc(e.title) + '</h3>';
+      html += '</article>';
+    });
+    root.innerHTML = html || '<p style="font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--fg-muted); padding: 32px 0;">More on the way. Check <a href="events.html" class="link">the full calendar</a>.</p>';
+  }
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

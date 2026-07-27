@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Our Chicago Clubhouses | River North and Wicker Park</title>
+<meta name="description" content="Two Chicago clubhouses, in River North and Wicker Park. One membership unlocks both, open every day for members to work, gather, host, and meet people." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/locations" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/locations" />
+<meta property="og:title" content="Our Chicago Clubhouses | River North and Wicker Park" />
+<meta property="og:description" content="Two Chicago clubhouses, in River North and Wicker Park. One membership unlocks both, open every day for members to work, gather, host, and meet people." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/1761593553812-0FZZT1SJGQ0Y0ZT1NR1P/3+Cities-083.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Our Chicago Clubhouses | River North and Wicker Park" />
+<meta name="twitter:description" content="Two Chicago clubhouses, in River North and Wicker Park. One membership unlocks both, open every day for members to work, gather, host, and meet people." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/1761593553812-0FZZT1SJGQ0Y0ZT1NR1P/3+Cities-083.jpg?format=2000w" />
+
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+.page-hero {
+  padding: 160px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 720px) { .page-hero { padding: 200px 0 110px; } }
+.page-hero__inner { display: flex; flex-direction: column; gap: 24px; max-width: 28ch; }
+.page-hero h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(60px, 9vw, 132px); line-height: 0.96; letter-spacing: -0.02em; margin: 0; }
+.page-hero h1 em { font-style: italic; color: var(--accent); }
+
+/* Location row */
+.loc-row { padding: 96px 0; }
+@media (min-width: 720px) { .loc-row { padding: 128px 0; } }
+.loc-row + .loc-row { border-top: 1px solid var(--line); }
+.loc-row__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (min-width: 880px) {
+  .loc-row__inner { grid-template-columns: 1.05fr 1fr; gap: 96px; align-items: start; }
+  .loc-row--reverse .loc-row__inner { grid-template-columns: 1fr 1.05fr; }
+  .loc-row--reverse .loc-row__media { order: 2; }
+}
+
+.loc-row__media {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--ink-700);
+}
+.loc-row__media img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.loc-row__body { display: flex; flex-direction: column; gap: 24px; }
+.loc-row__chapter {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.loc-row__chapter::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: 0.7; }
+.loc-row__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.loc-row__addr {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--fg-muted);
+}
+.loc-row__copy { font-size: 17px; line-height: 1.7; color: var(--fg); max-width: 48ch; }
+.loc-row__copy + .loc-row__copy { margin-top: 14px; color: var(--fg-muted); }
+
+.loc-row__amenities {
+  list-style: none; padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+  margin-top: 12px;
+}
+.loc-row__amenities li {
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--fg);
+  border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; gap: 12px;
+}
+.loc-row__amenities li::before {
+  content: "";
+  width: 5px; height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.loc-row__meta {
+  display: flex; flex-wrap: wrap; gap: 14px 28px;
+  margin-top: 8px;
+}
+.loc-row__meta dt {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0 0 4px;
+}
+.loc-row__meta dd {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--fg);
+  margin: 0;
+}
+
+/* Photo strip — small set of additional images for each location */
+.loc-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+@media (min-width: 600px) { .loc-strip { grid-template-columns: 1fr 1fr 1fr; } }
+.loc-strip img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.loc-row__cta {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html" class="is-active">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent">Apply for Membership</a>
+</aside>
+
+<!-- HERO -->
+<section class="page-hero" data-screen-label="02 Hero">
+  <div class="shell">
+    <div class="page-hero__inner">
+      <span class="eyebrow eyebrow--accent reveal">Two Clubhouses</span>
+      <h1 class="reveal" style="--delay: 80ms">Two clubhouses,<br /><em>one membership.</em></h1>
+      <p class="lede reveal" style="--delay: 160ms">River North on Ohio Street. Wicker Park on Milwaukee Avenue. One membership unlocks both, every day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RIVER NORTH -->
+<section class="loc-row" id="river-north" data-screen-label="03 River North">
+  <div class="shell">
+    <div class="loc-row__inner">
+      <div class="loc-row__media reveal">
+        <img src="../uploads/compressed_A7400410-HDR.jpg" alt="The lounge at the River North clubhouse in Chicago" loading="lazy" />
+      </div>
+
+      <div class="loc-row__body reveal" style="--delay: 100ms">
+        <span class="loc-row__chapter">Community events in River North, every week</span>
+        <h2 class="loc-row__name">A social club and coworking in River North.</h2>
+        <span class="loc-row__addr">320 W. Ohio St &middot; Chicago, IL 60654</span>
+
+        <p class="loc-row__copy">Our River North clubhouse on Ohio Street is open every day to work, gather, or host. It is home base for community events in River North, from member dinners to talks to run club.</p>
+        <p class="loc-row__copy">BYOB lounges, a long dining table, private offices, and open workspace. The bar is small on purpose. The library has more books than most people read in a year.</p>
+
+        <ul class="loc-row__amenities">
+          <li>BYOB lounges</li>
+          <li>Dining room</li>
+          <li>Open workspace</li>
+          <li>Private offices</li>
+          <li>The library</li>
+          <li>Event space</li>
+        </ul>
+
+        <dl class="loc-row__meta">
+          <div><dt>Hours</dt><dd>Open 24/7</dd></div>
+          <div><dt>Neighborhood</dt><dd>River North, Chicago</dd></div>
+        </dl>
+
+        <div class="loc-strip">
+          <img src="../uploads/compressed_A7400088-HDR.jpg" alt="Green lounge chairs at the River North clubhouse" loading="lazy" />
+          <img src="../uploads/compressed_A7400446-HDR.jpg" alt="The long bar table and Chicago map mural at the River North clubhouse" loading="lazy" />
+          <img src="../uploads/compressed_A7400090-HDR.jpg" alt="Dining tables by the windows at the River North clubhouse" loading="lazy" />
+        </div>
+
+        <div class="loc-row__cta">
+          <a href="river-north.html" class="btn btn--accent">See the River North clubhouse <span class="arrow">→</span></a>
+          <a href="membership.html#apply" class="btn btn--ghost">Apply for Membership</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WICKER PARK -->
+<section class="loc-row loc-row--reverse" id="wicker-park" data-screen-label="04 Wicker Park">
+  <div class="shell">
+    <div class="loc-row__inner">
+      <div class="loc-row__media reveal">
+        <img src="../uploads/3%20Cities-077.jpg" alt="The Wicker Park outdoor terrace with the Chicago skyline behind" loading="lazy" />
+      </div>
+
+      <div class="loc-row__body reveal" style="--delay: 100ms">
+        <span class="loc-row__chapter">Community events in Wicker Park, every week</span>
+        <h2 class="loc-row__name">A social club and coworking in Wicker Park.</h2>
+        <span class="loc-row__addr">1643 N. Milwaukee Ave &middot; Chicago, IL 60647</span>
+
+        <p class="loc-row__copy">Our Wicker Park clubhouse on Milwaukee Avenue is open every day. It anchors community events in Wicker Park, with member nights, talks, and programming built to help you meet people in the neighborhood.</p>
+        <p class="loc-row__copy">An outdoor terrace with the skyline behind it. A pool table, a home gym, a boardroom, private offices, a dining room, and open work areas.</p>
+
+        <ul class="loc-row__amenities">
+          <li>Outdoor terrace</li>
+          <li>Dining room</li>
+          <li>Pool table</li>
+          <li>Home gym</li>
+          <li>Boardroom</li>
+          <li>Phone booths</li>
+          <li>Private offices</li>
+          <li>Open workspace</li>
+        </ul>
+
+        <dl class="loc-row__meta">
+          <div><dt>Hours</dt><dd>Open 24/7</dd></div>
+          <div><dt>Neighborhood</dt><dd>Wicker Park, Chicago</dd></div>
+        </dl>
+
+        <div class="loc-strip">
+          <img src="../uploads/3%20Cities-019.jpg" alt="The pool table lounge at the Wicker Park clubhouse in Chicago" loading="lazy" />
+          <img src="../uploads/3%20Cities-031.jpg" alt="The bar at the Wicker Park clubhouse in Chicago" loading="lazy" />
+          <img src="../uploads/3%20Cities-085.jpg" alt="The rooftop lounge at the Wicker Park clubhouse in Chicago" loading="lazy" />
+        </div>
+
+        <div class="loc-row__cta">
+          <a href="wicker-park.html" class="btn btn--accent">See the Wicker Park clubhouse <span class="arrow">→</span></a>
+          <a href="membership.html#apply" class="btn btn--ghost">Apply for Membership</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAL CTA -->
+<section class="section section--teal" data-screen-label="05 Closer">
+  <div class="shell shell--narrow" style="text-align: center;">
+    <div class="reveal" style="display:flex; flex-direction:column; gap: 28px; align-items: center;">
+      <span class="eyebrow eyebrow--on-teal">One Membership</span>
+      <h2 class="h-section" style="color: var(--off-white);">Both clubhouses. <em>Same membership.</em></h2>
+      <p class="lede" style="color: var(--fg-on-teal-muted); text-align: center; margin: 0 auto;">River North or Wicker Park. One <a href="index.html" class="link" style="color: var(--off-white);">Chicago social club</a>, both clubhouses yours.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 8px;">
+        <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+        <a href="../join.html" class="btn btn--ghost-inverse btn--lg">Book a Tour</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="river-north.html">River North<br/>320 W. Ohio St</a>
+        <a href="wicker-park.html" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="index.html#programming">Programming</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

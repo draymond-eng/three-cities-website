@@ -1,0 +1,14 @@
+# Generated build output. Run `node build.js` to regenerate.
+deploy/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies, if any are ever added
+node_modules/
+
+# Working screenshots dropped into uploads during design review
+uploads/Screenshot*

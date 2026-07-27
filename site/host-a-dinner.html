@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Host a Dinner | Three Cities Social</title>
+<meta name="description" content="Chefs, restaurant operators, and culinary professionals: lead a night in our dinner series at Firehouse Lounge. Tell us about you and we will be in touch." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ---- Partnership page scaffolding ---- */
+.ph { padding: 132px 0 0; }
+@media (min-width: 720px) { .ph { padding: 172px 0 0; } }
+.ph__inner { display: flex; flex-direction: column; gap: 22px; max-width: 30ch; }
+.ph h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(52px, 8vw, 104px); line-height: 0.96; letter-spacing: -0.02em; margin: 0;
+}
+.ph__lede { font-size: 19px; line-height: 1.6; color: var(--fg-muted); max-width: 46ch; }
+
+.media-band { margin-top: 56px; }
+@media (min-width: 720px) { .media-band { margin-top: 72px; } }
+.media-band img {
+  width: 100%; height: clamp(280px, 46vw, 560px); object-fit: cover;
+  border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+}
+
+/* ---- Context ---- */
+.ctx { padding: 80px 0; }
+@media (min-width: 720px) { .ctx { padding: 112px 0; } }
+.ctx__grid { display: grid; grid-template-columns: 1fr; gap: 48px; max-width: var(--container-narrow); margin: 0 auto; }
+@media (min-width: 860px) { .ctx__grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.ctx__lead { display: flex; flex-direction: column; gap: 20px; }
+.ctx__lead p { color: var(--fg-muted); font-size: 17px; }
+.ctx__lead p strong { color: var(--fg); font-weight: 700; }
+
+.meta { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+.meta__row { display: flex; justify-content: space-between; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.meta__row dt { font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--fg-subtle); margin: 0; }
+.meta__row dd { margin: 0; font-size: 15px; color: var(--fg); text-align: right; }
+
+.formats { display: flex; flex-direction: column; gap: 28px; }
+.fmt { border-top: 2px solid var(--line-strong); padding-top: 18px; display: flex; flex-direction: column; gap: 8px; }
+.fmt h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(26px, 3vw, 34px); line-height: 1.05; margin: 0; }
+.fmt p { color: var(--fg-muted); font-size: 15.5px; }
+.fmt span.tag { font-family: var(--font-sans); font-weight: 700; font-size: 10px; letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--accent); }
+
+/* ---- Form ---- */
+.signup { background: var(--bg-sunken); border-top: 1px solid var(--line); }
+.signup__inner { max-width: 640px; margin: 0 auto; }
+.signup__head { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; max-width: 38ch; }
+
+.form { display: flex; flex-direction: column; gap: 26px; }
+.field { display: flex; flex-direction: column; gap: 9px; }
+.field label { font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-muted); }
+.field label .opt { color: var(--fg-faint); letter-spacing: 0.1em; font-weight: 600; }
+.field__hint { font-family: var(--font-sans); font-size: 13.5px; color: var(--fg-subtle); margin-top: -3px; }
+.field input, .field textarea, .field select {
+  font-family: var(--font-sans); font-size: 16px; color: var(--fg);
+  background: var(--bg-raised); border: 1px solid var(--line); border-radius: 2px;
+  padding: 15px 16px; outline: none; width: 100%;
+}
+.field textarea { resize: vertical; min-height: 116px; line-height: 1.55; }
+.field input::placeholder, .field textarea::placeholder { color: var(--fg-faint); }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); }
+.field select {
+  appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'><path d='M1 1l5 5 5-5' stroke='%23984929' stroke-width='1.5' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+}
+.seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.seg-grid--2 { grid-template-columns: 1fr 1fr; }
+@media (max-width: 519px) { .seg-grid, .seg-grid--2 { grid-template-columns: 1fr; } }
+.seg {
+  font-family: var(--font-sans); font-weight: 600; font-size: 15px; color: var(--fg);
+  text-align: center; cursor: pointer; background: var(--bg-raised);
+  border: 1px solid var(--line); border-radius: 2px; padding: 16px 14px;
+  transition: border-color 180ms, background 180ms, color 180ms;
+}
+.seg:hover { border-color: var(--accent); }
+.seg.is-on { border-color: var(--accent); background: rgba(152,73,41,0.08); color: var(--accent); }
+.form__foot { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 10px; }
+.form__legal { margin: 0; font-size: 13px; color: var(--fg-subtle); max-width: 34ch; }
+.venue-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (min-width: 760px) { .venue-gallery { grid-template-columns: 2fr 1fr 1fr; gap: 16px; } }
+.venue-gallery figure { margin: 0; overflow: hidden; background: var(--ink-700); aspect-ratio: 3/2; }
+.venue-gallery .vg-wide { grid-column: 1 / -1; aspect-ratio: 16/9; }
+@media (min-width: 760px) { .venue-gallery .vg-wide { grid-column: span 1; grid-row: span 2; aspect-ratio: auto; } }
+.venue-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.venue-caption { margin-top: 16px; font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--fg-subtle); }
+
+.form__success { display: none; padding: 44px 40px; background: var(--bg-raised); border: 1px solid var(--accent); border-radius: 2px; position: relative; }
+.form__success::before { content: ""; position: absolute; left: -1px; top: -1px; bottom: -1px; width: 4px; background: var(--accent); }
+.form__success.is-on { display: flex; flex-direction: column; gap: 14px; }
+.form__success h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(32px, 4vw, 46px); line-height: 1.04; letter-spacing: -0.01em; margin: 0; }
+.form__success p { color: var(--fg); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <a href="locations.html">Locations</a>
+      <a href="events.html">Programming</a>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html" class="is-active">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="events.html">Programming</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent" style="margin-top: 24px; align-self: flex-start;">Apply for Membership</a>
+</aside>
+
+<section class="ph" data-screen-label="02 Hero">
+  <div class="shell">
+    <div class="ph__inner">
+      <span class="eyebrow eyebrow--accent">Chef Inquiry</span>
+      <h1>Host a Dinner</h1>
+      <p class="ph__lede">Lead a night in our ongoing dinner series at Firehouse Lounge. If you cook, tell us a bit about you and we will be in touch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ctx" data-screen-label="03 Context">
+  <div class="shell">
+    <div class="ctx__grid">
+      <div class="ctx__lead">
+        <span class="eyebrow eyebrow--accent">The Setting</span>
+        <p>Three Cities Social runs an ongoing dinner series in partnership with <strong>Firehouse Lounge</strong>, a historic 1886 firehouse in Logan Square rehabbed into a beautiful event space with a chef's kitchen, oversized island, gas fireplace, and pool table.</p>
+        <dl class="meta">
+          <div class="meta__row"><dt>When</dt><dd>Last Tuesday monthly, 7pm</dd></div>
+          <div class="meta__row"><dt>Where</dt><dd>Firehouse Lounge, Logan Square</dd></div>
+          <div class="meta__row"><dt>Address</dt><dd>2737 W Diversey Ave, Chicago</dd></div>
+        </dl>
+      </div>
+      <div class="formats">
+        <div class="fmt">
+          <span class="tag">House Dinner</span>
+          <h3>The monthly members' cook</h3>
+          <p>Capped at 14. A chef or member leads the menu, and the group cooks together, in small groups, or however the host wants to run it.</p>
+        </div>
+        <div class="fmt">
+          <span class="tag">Chef's Series</span>
+          <h3>The quarterly premium dinner</h3>
+          <p>A guest chef takes over the kitchen for a seated dinner built around their menu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-screen-label="03b Venue" style="padding-top: 0;">
+  <div class="shell">
+    <div class="venue-gallery reveal">
+      <figure class="vg-wide"><img src="../uploads/stockloft-1_b01a0c1c-8176-4df9-8252-75910c6cccb3.webp" alt="The Firehouse Lounge main room with fireplace, lounge seating, and pool table" loading="lazy" /></figure>
+      <figure><img src="../uploads/stockloft-7.webp" alt="The chef's kitchen and island at Firehouse Lounge" loading="lazy" /></figure>
+      <figure><img src="../uploads/stockloft-3.webp" alt="The lounge and long table at Firehouse Lounge" loading="lazy" /></figure>
+      <figure><img src="../uploads/stockloft-44.webp" alt="The kitchen island and bar seating at Firehouse Lounge" loading="lazy" /></figure>
+    </div>
+    <p class="venue-caption reveal">Firehouse Lounge &middot; 2737 W Diversey Ave, Logan Square</p>
+  </div>
+</section>
+
+<section class="section signup" data-screen-label="04 Form">
+  <div class="shell">
+    <div class="signup__inner">
+      <div class="signup__head">
+        <span class="eyebrow eyebrow--accent">Tell Us About You</span>
+        <h2 class="h-section">Lead a <em>night</em>.</h2>
+      </div>
+
+      <form class="form" id="chef-form" novalidate>
+        <input type="hidden" name="form_name" value="Chef Inquiry — Host a Dinner" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="field">
+          <label for="c-name">Full name</label>
+          <input id="c-name" name="full_name" type="text" autocomplete="name" placeholder="First and last" required />
+        </div>
+
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required />
+        </div>
+
+        <div class="field">
+          <label for="c-phone">Phone</label>
+          <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="(312) 555-0100" required />
+        </div>
+
+        <div class="field">
+          <label>Are you a Three Cities member?</label>
+          <div class="seg-grid" role="radiogroup" aria-label="Are you a Three Cities member">
+            <button type="button" class="seg" data-value="Yes, a member">Yes, a member</button>
+            <button type="button" class="seg" data-value="Not yet">Not yet</button>
+          </div>
+          <input type="hidden" name="member_status" id="c-member" required />
+        </div>
+
+        <div class="field">
+          <label for="c-biz">Restaurant, business, or brand <span class="opt">— if applicable</span></label>
+          <input id="c-biz" name="business" type="text" placeholder="Where you cook, if anywhere" />
+        </div>
+
+        <div class="field">
+          <label for="c-web">Website or Instagram</label>
+          <input id="c-web" name="website" type="text" placeholder="@handle or link" />
+        </div>
+
+        <div class="field">
+          <label>Which format are you interested in?</label>
+          <div class="seg-grid" role="radiogroup" aria-label="Which format are you interested in">
+            <button type="button" class="seg" data-value="House Dinner">House Dinner</button>
+            <button type="button" class="seg" data-value="Chef's Series">Chef's Series</button>
+            <button type="button" class="seg" data-value="Either">Either</button>
+          </div>
+          <input type="hidden" name="format" id="c-format" required />
+        </div>
+
+        <div class="field">
+          <label for="c-bg">Cooking background and experience</label>
+          <span class="field__hint">No pro experience needed. Tell us what you cook and how you learned.</span>
+          <textarea id="c-bg" name="background" placeholder="Where you have cooked, what you cook, how long." required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="c-menu">What menu or theme would you want to lead?</label>
+          <textarea id="c-menu" name="menu" placeholder="A cuisine, a format, a single dish you build the night around."></textarea>
+        </div>
+
+        <div class="field">
+          <label>How do you want the night to run?</label>
+          <span class="field__hint">However it works best. Cook with the group, cook in small groups, or run the kitchen solo.</span>
+          <div class="seg-grid" role="radiogroup" aria-label="How do you want the night to run">
+            <button type="button" class="seg" data-value="Cook together with the group">With the group</button>
+            <button type="button" class="seg" data-value="Cook in small groups">In small groups</button>
+            <button type="button" class="seg" data-value="Lead the kitchen solo">Solo</button>
+            <button type="button" class="seg" data-value="Open to anything">Open to anything</button>
+          </div>
+          <input type="hidden" name="hands_on" id="c-handson" />
+        </div>
+
+        <div class="field">
+          <label for="c-months">Which months work best for you?</label>
+          <span class="field__hint">Dinners are the last Tuesday of each month.</span>
+          <input id="c-months" name="months" type="text" placeholder="e.g. September or October" />
+        </div>
+
+        <div class="field">
+          <label>Open to a co-promoted event?</label>
+          <span class="field__hint">Where we both market to our audiences.</span>
+          <div class="seg-grid" role="radiogroup" aria-label="Open to a co-promoted event">
+            <button type="button" class="seg" data-value="Yes">Yes</button>
+            <button type="button" class="seg" data-value="No">No</button>
+            <button type="button" class="seg" data-value="Open to discuss">Open to discuss</button>
+          </div>
+          <input type="hidden" name="copromo" id="c-copromo" />
+        </div>
+
+        <div class="field">
+          <label for="c-notes">Anything else we should know?</label>
+          <textarea id="c-notes" name="notes" placeholder="Optional."></textarea>
+        </div>
+
+        <div class="form__foot">
+          <p class="form__legal">Your inquiry goes to the Three Cities team. We reply within five business days.</p>
+          <button type="submit" class="btn btn--accent btn--lg">Submit <span class="arrow">&rarr;</span></button>
+        </div>
+      </form>
+
+      <div class="form__success" id="chef-success">
+        <span class="eyebrow eyebrow--accent" style="margin-bottom: 4px;">Received</span>
+        <h3>Thanks.</h3>
+        <p>We've got your info and we'll be in touch within five business days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A social club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="river-north.html">River North<br/>320 W. Ohio St</a>
+        <a href="wicker-park.html" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="events.html">Programming</a>
+        <a href="networking-events-chicago.html">Networking events in Chicago</a>
+        <a href="host.html">Venue Rental</a>
+        <a href="membership.html">Membership</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  // Segmented selectors write the chosen value into the adjacent hidden input.
+  document.querySelectorAll('.seg-grid').forEach(function (grid) {
+    var hidden = grid.parentElement.querySelector('input[type="hidden"]');
+    grid.querySelectorAll('.seg').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        grid.querySelectorAll('.seg').forEach(function (b) { b.classList.remove('is-on'); });
+        btn.classList.add('is-on');
+        if (hidden) hidden.value = btn.getAttribute('data-value');
+      });
+    });
+  });
+
+  // Submissions post to a Google Apps Script web app that writes to a sheet and
+  // emails the team (Danielle, Cici, Dray, Alicia). Paste the /exec URL below.
+  var GSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzvVDtag-8DyHdkXw7vhNoAC2T_bp5RUFOV0dpRpB8_oqMgr0IuAhaHg5BVB8n_kIs/exec';
+  var form = document.getElementById('chef-form');
+  var success = document.getElementById('chef-success');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.innerHTML = 'Sending...'; }
+    var data = new FormData(form);
+    data.append('submitted_at', new Date().toISOString());
+    data.append('page', location.href);
+    if (!GSCRIPT_URL || GSCRIPT_URL === 'CHEF_INQUIRY_SCRIPT_URL_HERE') {
+      var obj = {}; data.forEach(function (v, k) { obj[k] = v; });
+      console.info('[chef-inquiry] No endpoint set yet. Submission:', obj);
+      form.style.display = 'none'; success.classList.add('is-on');
+      return;
+    }
+    fetch(GSCRIPT_URL, { method: 'POST', body: data })
+      .then(function () { form.style.display = 'none'; success.classList.add('is-on'); })
+      .catch(function () {
+        if (btn) { btn.disabled = false; btn.innerHTML = 'Submit <span class="arrow">&rarr;</span>'; }
+        alert('We hit a snag sending your inquiry. Please try again, or email us at hello@threecitiessocial.com.');
+      });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>

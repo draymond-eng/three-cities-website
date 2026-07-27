@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Social Club and Coworking in River North | Three Cities Social</title>
+<meta name="description" content="A social club and coworking space in River North, Chicago. Daily clubhouse access on Ohio Street, weekly community events, and a membership built around real connection." />
+<link rel="canonical" href="https://threecitiessocial.com/river-north" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/river-north" />
+<meta property="og:title" content="Social Club and Coworking in River North | Three Cities Social" />
+<meta property="og:description" content="A social club and coworking space in River North, Chicago. Daily clubhouse access on Ohio Street, weekly community events, and a membership built around real connection." />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2000w" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Social Club and Coworking in River North | Three Cities Social" />
+<meta name="twitter:description" content="A social club and coworking space in River North, Chicago. Daily clubhouse access on Ohio Street, weekly community events, and a membership built around real connection." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/d2efb0d5-0171-4553-9168-01f0fb66d205/A7400201-HDR.jpg?format=2000w" />
+
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Neighborhood page */
+.nb-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--matte-black-deep); color: var(--off-white);
+  min-height: 78svh; display: flex; align-items: flex-end;
+}
+.nb-hero__media { position: absolute; inset: 0; z-index: 0; }
+.nb-hero__media img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+.nb-hero__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(37,33,30,0.45) 0%, rgba(37,33,30,0.85) 100%);
+}
+.nb-hero__inner {
+  position: relative; z-index: 1; width: 100%;
+  max-width: var(--container); margin: 0 auto;
+  padding: 160px 22px 72px;
+}
+@media (min-width: 720px) { .nb-hero__inner { padding: 200px 40px 96px; } }
+@media (min-width: 1100px) { .nb-hero__inner { padding: 220px 64px 110px; } }
+.nb-hero__eyebrow {
+  font-family: var(--font-sans); font-weight: 700; font-size: 11px;
+  letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  color: var(--off-white); display: inline-flex; align-items: center; gap: 14px; margin-bottom: 28px;
+}
+.nb-hero__eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--autumn-soft); }
+.nb-hero h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(48px, 8vw, 112px); line-height: 0.98; letter-spacing: -0.02em;
+  margin: 0; color: var(--off-white); max-width: 18ch;
+}
+.nb-hero h1 em { font-style: italic; color: var(--autumn-soft); }
+.nb-hero__sub {
+  margin-top: 28px; max-width: 54ch;
+  font-family: var(--font-display); font-style: normal; font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 26px); line-height: 1.45; color: var(--fg-inverse-muted);
+}
+.nb-hero__actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+.nb-block { padding: 88px 0; }
+@media (min-width: 720px) { .nb-block { padding: 120px 0; } }
+.nb-block + .nb-block { border-top: 1px solid var(--line); }
+.nb-split {
+  display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start;
+}
+@media (min-width: 880px) { .nb-split { grid-template-columns: 0.9fr 1.1fr; gap: 80px; } }
+.nb-split__head { display: flex; flex-direction: column; gap: 18px; }
+.nb-split__head h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(34px, 4.4vw, 56px); line-height: 1.02; letter-spacing: -0.015em; margin: 0;
+}
+.nb-split__head h2 em { font-style: italic; color: var(--accent); }
+.nb-split__body p { font-size: 18px; line-height: 1.7; color: var(--fg); }
+.nb-split__body p + p { margin-top: 16px; color: var(--fg-muted); }
+
+/* Amenities + photos */
+.nb-amen {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px;
+  border-top: 1px solid var(--line);
+}
+.nb-amen li {
+  padding: 16px 0; border-bottom: 1px solid var(--line);
+  font-size: 16px; color: var(--fg); display: flex; align-items: baseline; gap: 14px;
+}
+.nb-amen li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; transform: translateY(-2px); }
+.nb-photos {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px;
+}
+@media (min-width: 760px) { .nb-photos { grid-template-columns: 2fr 1fr 1fr; gap: 16px; } }
+.nb-photos figure { margin: 0; overflow: hidden; background: var(--ink-700); aspect-ratio: 4/5; }
+.nb-photos figure.wide { grid-column: span 2; aspect-ratio: 16/10; }
+@media (min-width: 760px) { .nb-photos figure.wide { grid-column: span 1; grid-row: span 2; aspect-ratio: 3/5; } }
+.nb-photos img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Find us */
+.nb-find__grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+@media (min-width: 880px) { .nb-find__grid { grid-template-columns: 1fr 1.2fr; gap: 64px; } }
+.nb-find__addr {
+  font-family: var(--font-display); font-style: italic; font-size: 22px; line-height: 1.4; color: var(--fg);
+}
+.nb-find__meta { margin-top: 20px; display: flex; flex-direction: column; gap: 4px; }
+.nb-find__meta dt {
+  font-family: var(--font-sans); font-weight: 700; font-size: 11px; letter-spacing: var(--tracking-widest);
+  text-transform: uppercase; color: var(--fg-muted); margin-top: 16px;
+}
+.nb-find__meta dd { margin: 0; font-size: 16px; color: var(--fg); }
+.nb-map { width: 100%; aspect-ratio: 4/3; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+.nb-map iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(0.2) contrast(1.05); }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"3","bestRating":"5"},"name":"Three Cities Social - River North","description":"A social club and coworking space in River North, Chicago, built around connection. Daily clubhouse access, weekly community events, and a membership for people who want real friends.","url":"https://threecitiessocial.com/river-north","image":"https://threecitiessocial.com/uploads/compressed_A7400003-HDR.jpg","email":"hello@threecitiessocial.com","address":{"@type":"PostalAddress","streetAddress":"320 W. Ohio St","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60654","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":41.8923,"longitude":-87.6364},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}],"parentOrganization":{"@type":"Organization","name":"Three Cities Social","url":"https://threecitiessocial.com"},"sameAs":["https://instagram.com/threecities.social"]}</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html" class="is-active">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent">Apply for Membership</a>
+</aside>
+
+<!-- HERO -->
+<section class="nb-hero" data-screen-label="02 Hero">
+  <div class="nb-hero__media" aria-hidden="true">
+    <img src="../uploads/compressed_A7400003-HDR.jpg" alt="The lounge at the River North clubhouse in Chicago with the city map mural" />
+  </div>
+  <div class="nb-hero__inner">
+    <span class="nb-hero__eyebrow reveal">River North, Chicago</span>
+    <h1 class="reveal" style="--delay: 80ms">A social club in <em>River North</em>, Chicago.</h1>
+    <p class="nb-hero__sub reveal" style="--delay: 160ms">Three Cities Social is a social club in River North built around connection. Our clubhouse sits on Ohio Street in the Near North Side, open every day, so it doubles as coworking when you want a place to get real work done near people worth knowing. One membership unlocks this clubhouse and our Wicker Park location.</p>
+    <div class="nb-hero__actions reveal" style="--delay: 240ms">
+      <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+      <a href="https://meetings-na2.hubspot.com/draymond?uuid=0f6ed97e-5852-459c-9c39-32b3e2f93b04" target="_blank" rel="noopener" class="btn btn--ghost-inverse btn--lg">Book a Tour</a>
+    </div>
+  </div>
+</section>
+
+<!-- COWORKING -->
+<section class="nb-block" data-screen-label="03 Coworking">
+  <div class="shell">
+    <div class="nb-split">
+      <div class="nb-split__head reveal">
+        <span class="eyebrow eyebrow--accent">Work</span>
+        <h2>Coworking in the heart of <em>downtown</em>.</h2>
+      </div>
+      <div class="nb-split__body reveal" style="--delay: 100ms">
+        <p>Downtown days, with company. Take a call, post up with a laptop, book the boardroom, then close the day with the room instead of an empty apartment.</p>
+        <p>Phone booths and private offices are free to reserve daily. This is coworking in River North where the people around you are members, not strangers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY EVENTS -->
+<section class="nb-block" data-screen-label="04 Community events">
+  <div class="shell">
+    <div class="nb-split">
+      <div class="nb-split__head reveal">
+        <span class="eyebrow eyebrow--accent">Gather</span>
+        <h2>Community events in River North, <em>every week</em>.</h2>
+      </div>
+      <div class="nb-split__body reveal" style="--delay: 100ms">
+        <p>The River North calendar runs on member dinners, talks, run club, and member nights.</p>
+        <p>Community events in River North that turn a place you work into a place you belong. See what is coming up on the <a href="events.html" class="link">programming calendar</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE THE CLUBHOUSE -->
+<section class="nb-block" data-screen-label="05 Inside">
+  <div class="shell">
+    <div class="nb-split">
+      <div class="nb-split__head reveal">
+        <span class="eyebrow eyebrow--accent">The Space</span>
+        <h2>Inside the Ohio Street <em>clubhouse</em>.</h2>
+      </div>
+      <div class="nb-split__body reveal" style="--delay: 100ms">
+        <p>Our original location, opened in 2024. BYOB lounges, a long dining table, private offices, and open workspace. Phone booths and private offices are free to reserve daily. The bar is small on purpose. The library has more books than most people read in a year.</p>
+        <ul class="nb-amen" style="margin-top: 24px;">
+          <li>BYOB lounges</li>
+          <li>Long dining table</li>
+          <li>Open workspace</li>
+          <li>Phone booths</li>
+          <li>Private offices</li>
+          <li>The library</li>
+          <li>Event space</li>
+          <li>Boardroom</li>
+          <li>Open 24/7</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nb-photos reveal" style="margin-top: 48px;">
+      <figure class="wide"><img src="../uploads/compressed_A7400075-HDR.jpg" alt="The open lounge and coworking area at the River North clubhouse in Chicago" loading="lazy" /></figure>
+      <figure><img src="../uploads/compressed_A7400018-HDR.jpg" alt="A green velvet sofa lounge at the River North clubhouse in Chicago" loading="lazy" /></figure>
+      <figure><img src="../uploads/compressed_A7400446-HDR.jpg" alt="The long bar table and Chicago map mural at the River North clubhouse" loading="lazy" /></figure>
+      <figure><img src="../uploads/compressed_A7400090-HDR.jpg" alt="Dining tables by the windows at the River North clubhouse in Chicago" loading="lazy" /></figure>
+      <figure><img src="../uploads/compressed_A7400122-HDR.jpg" alt="A private dining and meeting room at the River North clubhouse in Chicago" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section class="nb-block section--rule" data-screen-label="06 Find us">
+  <div class="shell">
+    <div class="section__head reveal">
+      <span class="eyebrow eyebrow--accent">Visit</span>
+      <h2 class="h-section">Find us in <em>River North</em>.</h2>
+    </div>
+    <div class="nb-find__grid">
+      <div class="reveal">
+        <p class="nb-find__addr">River North clubhouse<br/>320 W Ohio St<br/>Chicago, IL 60654</p>
+        <dl class="nb-find__meta">
+          <dt>Hours</dt><dd>Open 24/7 for members</dd>
+          <dt>Getting here</dt><dd>Two blocks from the Grand stop on the Red Line. Street and garage parking nearby.</dd>
+          <dt>Tours</dt><dd><a href="https://meetings-na2.hubspot.com/draymond?uuid=0f6ed97e-5852-459c-9c39-32b3e2f93b04" target="_blank" rel="noopener" class="link">Book a River North tour</a></dd>
+        </dl>
+      </div>
+      <div class="nb-map reveal" style="--delay: 100ms">
+        <iframe title="Map to the River North clubhouse, 320 W Ohio St, Chicago" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=320+W+Ohio+St,+Chicago,+IL+60654&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAL CTA -->
+<section class="section section--teal" data-screen-label="07 Closer">
+  <div class="shell shell--narrow" style="text-align: center;">
+    <div class="reveal" style="display:flex; flex-direction:column; gap: 28px; align-items: center;">
+      <span class="eyebrow eyebrow--on-teal">One Membership</span>
+      <h2 class="h-section" style="color: var(--off-white);">Both clubhouses. <em>One membership.</em></h2>
+      <p class="lede" style="color: var(--fg-on-teal-muted); text-align: center; margin: 0 auto;">Your River North membership also unlocks <a href="wicker-park.html" class="link" style="color: var(--off-white);">Wicker Park</a>. One <a href="index.html" class="link" style="color: var(--off-white);">Chicago social club</a>, both clubhouses yours.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 8px;">
+        <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+        <a href="../join.html" class="btn btn--ghost-inverse btn--lg">Book a Tour</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="river-north.html">River North<br/>320 W. Ohio St</a>
+        <a href="wicker-park.html" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="events.html">Programming</a>
+        <a href="networking-events-chicago.html">Networking events in Chicago</a>
+        <a href="host.html">Venue Rental</a>
+        <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+      <span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
