@@ -24,7 +24,7 @@
         return;
       }
       var data = new FormData(form);
-      data.append('form_name', 'Guest List Signup');
+      data.append('form_name', form.getAttribute('data-signup-name') || 'Guest List Signup');
       data.append('page', form.getAttribute('data-signup-page') || document.title);
       var btn = form.querySelector('button[type="submit"]');
       if (btn) btn.disabled = true;
@@ -91,31 +91,6 @@
     parallax();
   }
 
-  /* ---------- Count-up stats ---------- */
-  var counters = document.querySelectorAll('[data-count]');
-  if (counters.length && 'IntersectionObserver' in window) {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        cio.unobserve(entry.target);
-        var el = entry.target;
-        var target = parseInt(el.getAttribute('data-count'), 10);
-        var suffix = el.getAttribute('data-count-suffix') || '';
-        if (reducedMotion) { el.textContent = target + suffix; return; }
-        var start = null;
-        var dur = 1400;
-        function step(ts) {
-          if (!start) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          var eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(eased * target) + (p === 1 ? suffix : '');
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function (el) { cio.observe(el); });
-  }
 
   /* ---------- Capture modal: one soft invitation per visitor ---------- */
   var modal = document.getElementById('capture-modal');

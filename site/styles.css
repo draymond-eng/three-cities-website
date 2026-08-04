@@ -802,70 +802,13 @@ body::after {
 }
 
 /* =========================================================
-   Stats — count-up strip.
+   Signup form — shared by the capture modal.
    ========================================================= */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 24px;
-}
-@media (min-width: 760px) { .stats { grid-template-columns: repeat(4, 1fr); gap: 32px; } }
-.stat {
-  display: flex; flex-direction: column; gap: 10px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line-inverse-strong);
-}
-.stat__value {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(52px, 6.5vw, 92px);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--off-white);
-  font-variant-numeric: tabular-nums;
-}
-.stat__value em { font-style: italic; color: var(--autumn-soft); }
-.stat__label {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  color: var(--fg-inverse-muted);
-}
-
-/* =========================================================
-   Guest list — email capture, inline section.
-   ========================================================= */
-.invite {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: center;
-}
-@media (min-width: 900px) {
-  .invite { grid-template-columns: 1fr 1.1fr; gap: 96px; }
-}
-.invite__photo {
-  position: relative;
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  background: var(--ink-700);
-  max-height: 560px;
-}
-.invite__photo img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
-.invite__body { display: flex; flex-direction: column; gap: 24px; }
 .signup { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
-.signup__row {
-  display: flex; flex-wrap: wrap; gap: 12px;
-}
+.signup__row { display: flex; flex-wrap: wrap; gap: 12px; }
 .signup__row input[type="email"],
 .signup__row input[type="text"] {
-  flex: 1 1 240px;
+  flex: 1 1 200px;
   font-family: var(--font-sans);
   font-size: 16px;
   color: var(--fg);
@@ -888,34 +831,6 @@ body::after {
 .signup.is-done .signup__row,
 .signup.is-done .signup__note { display: none; }
 .signup.is-done .signup__done { display: block; }
-
-/* =========================================================
-   Footer signup — compact capture on every page.
-   ========================================================= */
-.footer__signup { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
-.footer__signup p { color: var(--fg-inverse-muted); font-size: 14px; }
-.footer__signup-row { display: flex; gap: 10px; }
-.footer__signup-row input[type="email"] {
-  flex: 1;
-  min-width: 0;
-  font-family: var(--font-sans);
-  font-size: 15px;
-  color: var(--off-white);
-  background: rgba(224,212,200,0.07);
-  border: 1px solid var(--line-inverse-strong);
-  border-radius: 2px;
-  padding: 13px 14px;
-  outline: none;
-  transition: border-color 220ms, background 220ms;
-}
-.footer__signup-row input[type="email"]::placeholder { color: var(--fg-inverse-subtle); }
-.footer__signup-row input[type="email"]:focus {
-  border-color: var(--autumn-soft);
-  background: rgba(224,212,200,0.11);
-}
-.footer__signup-row .btn { padding: 13px 18px; font-size: 14px; }
-.footer__signup .signup__done { color: var(--autumn-soft); font-size: 18px; }
-.footer__signup.is-done .footer__signup-row { display: none; }
 
 /* =========================================================
    Capture modal — one invitation, softly, once.
@@ -979,6 +894,14 @@ body::after {
 }
 .capture__title em { font-style: italic; color: var(--accent); }
 .capture__copy { font-size: 16px; color: var(--fg-muted); max-width: 40ch; }
+.capture__detail {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--accent);
+}
 .capture__close {
   position: absolute; top: 14px; right: 14px;
   z-index: 2;

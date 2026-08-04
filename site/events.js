@@ -32,6 +32,9 @@ window.TCS_EVENTS = [
   { date: "2026-07-29", time: "18:30", title: "Side A: Good Kid, M.A.A.D City",                   location: "Three Cities · River North",   access: "Members Only", pillar: "Social" },
   { date: "2026-07-30", time: "18:00", title: "AI in Practice: A Hands-On Workshop",              location: "Three Cities · River North",   access: "Members Only", pillar: "Talk"   },
 
+  // === SEPTEMBER 2026 ===
+  { date: "2026-09-09", time: "17:00", title: "Open House and NFL Kickoff Night",              location: "Three Cities · River North",   access: "Open to Public", pillar: "Social" },
+
   // === AUGUST 2026 ===
   { date: "2026-08-01", time: "15:00", title: "Adult Field Day",                                  location: "Cricket Hill · Lincoln Park",  access: "Members Only", pillar: "Play"   },
   { date: "2026-08-16", time: "10:00", title: "Yacht Outing on Lake Michigan: Air and Water Show", location: "Lake Michigan",               access: "Members Only", pillar: "Social" }
