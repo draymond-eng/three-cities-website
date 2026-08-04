@@ -104,7 +104,41 @@ function build() {
       return `/${slug}\t/${f}\t200`;
     })
     .join('\n');
-  fs.writeFileSync(path.join(OUT, '_redirects'), redirects + '\n');
+  // The Programming page's canonical URL is /programming, not /events.
+  fs.writeFileSync(
+    path.join(OUT, '_redirects'),
+    redirects + '\n/programming\t/events.html\t200\n'
+  );
+
+  // 5. Search engine files. Sitemap covers indexable pages only, at their
+  //    canonical URLs; unlinked noindex pages and the ads landing page stay out.
+  const SITE_URL = 'https://threecitiessocial.com';
+  const CANONICAL_PATHS = [
+    '/',
+    '/story',
+    '/locations',
+    '/river-north',
+    '/wicker-park',
+    '/programming',
+    '/membership',
+    '/host',
+    '/networking-events-chicago',
+  ];
+  const today = new Date().toISOString().slice(0, 10);
+  const sitemap =
+    '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    CANONICAL_PATHS.map(
+      (p) =>
+        `  <url><loc>${SITE_URL}${p}</loc><lastmod>${today}</lastmod></url>`
+    ).join('\n') +
+    '\n</urlset>\n';
+  fs.writeFileSync(path.join(OUT, 'sitemap.xml'), sitemap);
+
+  fs.writeFileSync(
+    path.join(OUT, 'robots.txt'),
+    `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`
+  );
 
   console.log(
     `Built deploy/: ${pages} pages, ${passthrough} support files, ` +
