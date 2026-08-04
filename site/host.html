@@ -421,6 +421,14 @@
           <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
         </a>
         <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+        <form class="footer__signup signup" data-signup data-signup-page="Footer: Host" novalidate>
+          <p>The monthly calendar and open invites, in your inbox.</p>
+          <div class="footer__signup-row">
+            <input type="email" name="email" placeholder="Email address" autocomplete="email" required aria-label="Email address" />
+            <button class="btn btn--accent" type="submit" aria-label="Join the guest list"><span class="arrow">&rarr;</span></button>
+          </div>
+          <p class="signup__done">You are on the list.</p>
+        </form>
       </div>
       <div class="footer__col">
         <span class="eyebrow">Visit</span>
@@ -530,5 +538,6 @@
 })();
 </script>
 
+<script src="site.js"></script>
 </body>
 </html>

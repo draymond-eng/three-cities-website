@@ -618,11 +618,11 @@
 <!-- ============================== HERO ============================== -->
 <section class="hero" id="top" data-screen-label="02 Hero">
   <div class="hero__media" aria-hidden="true">
-    <img src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2500w" alt="Members raising glasses around a long table" />
+    <img class="kenburns" src="https://images.squarespace-cdn.com/content/v1/68beeb47f4532e51e24b78f6/63d46ab3-a099-4526-b0cb-5759823ed937/TC+Nov+Event-44.jpg?format=2500w" alt="Members raising glasses around a long table" />
   </div>
 
   <div class="hero__inner">
-    <h1 class="h-display hero__headline reveal" style="--delay: 80ms">
+    <h1 class="h-display hero__headline js-split">
       A social club in Chicago, built for <em>real friendship</em>.
     </h1>
     <p class="hero__sub reveal" style="--delay: 160ms">
@@ -635,6 +635,44 @@
   </div>
 
   <!-- Hero caption removed per content cleanup. -->
+</section>
+
+<!-- ============================== RIBBON ============================== -->
+<div class="ribbon-wrap" data-screen-label="02b Ribbon" aria-hidden="true">
+  <div class="ribbon">
+    <div class="ribbon__track">
+      <div class="ribbon__set">
+        <span>Long Table Dinners</span><span>Run Club</span><span>Yacht Outings</span><span>Game Nights</span><span>Volunteer Days</span><span>Wine Tastings</span><span>Poker Nights</span><span>Happy Hours</span><span>Mahjong Mornings</span><span>Member Parties</span>
+      </div>
+      <div class="ribbon__set">
+        <span>Long Table Dinners</span><span>Run Club</span><span>Yacht Outings</span><span>Game Nights</span><span>Volunteer Days</span><span>Wine Tastings</span><span>Poker Nights</span><span>Happy Hours</span><span>Mahjong Mornings</span><span>Member Parties</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== STATS ============================== -->
+<section class="section--dark section--tight section" data-screen-label="03 Stats">
+  <div class="shell">
+    <div class="stats reveal">
+      <div class="stat">
+        <span class="stat__value"><span data-count="2">0</span></span>
+        <span class="stat__label">Clubhouses, open 24/7</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value"><span data-count="20" data-count-suffix="+">0</span></span>
+        <span class="stat__label">Gatherings every month</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value"><span data-count="5">0</span></span>
+        <span class="stat__label">Pillars of programming</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value"><em>One</em></span>
+        <span class="stat__label">Membership, full access</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============================== STORY SNIPPET ============================== -->
@@ -860,10 +898,35 @@
   </div>
 </section>
 
+<!-- ============================== GUEST LIST ============================== -->
+<section class="section section--rule" id="guest-list" data-screen-label="09b Guest List">
+  <div class="shell">
+    <div class="invite">
+      <div class="invite__photo reveal reveal--scale">
+        <img src="../uploads/TC%20Happy%20Hour-17%20%282%29.jpg" alt="Members in conversation at a Three Cities happy hour" loading="lazy" />
+      </div>
+      <div class="invite__body">
+        <span class="eyebrow eyebrow--accent reveal">The Guest List</span>
+        <h2 class="h-section reveal" style="--delay: 80ms">Get on <em>the guest list</em>.</h2>
+        <p class="p-large p-muted reveal" style="--delay: 160ms; max-width: 46ch;">One email a month. The calendar, the stories, and the gatherings that are open to the public. The easiest way to see what this is before you apply.</p>
+        <form class="signup reveal" style="--delay: 240ms" data-signup data-signup-page="Homepage guest list" novalidate>
+          <div class="signup__row">
+            <input type="text" name="first_name" placeholder="First name" autocomplete="given-name" aria-label="First name" />
+            <input type="email" name="email" placeholder="Email address" autocomplete="email" required aria-label="Email address" />
+            <button class="btn btn--accent btn--lg" type="submit">Get the Invites <span class="arrow">→</span></button>
+          </div>
+          <p class="signup__note">Once a month, no more. Your information stays with us.</p>
+          <p class="signup__done">You are on the list. Watch your inbox.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== CLOSER ============================== -->
 <section class="closer" data-screen-label="10 Closer">
   <div class="closer__media" aria-hidden="true">
-    <img src="../uploads/3cities_trivia-32.jpg" alt="" />
+    <img src="../uploads/3cities_trivia-32.jpg" alt="" data-parallax="0.35" />
   </div>
   <div class="closer__inner reveal">
     <span class="eyebrow eyebrow--inverse" style="color: rgba(246,240,226,0.8);">Come See It</span>
@@ -885,6 +948,14 @@
           <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
         </a>
         <p>A membership club in Chicago, built around connection. Two clubhouses with programming every week.</p>
+        <form class="footer__signup signup" data-signup data-signup-page="Footer: Homepage" novalidate>
+          <p>The monthly calendar and open invites, in your inbox.</p>
+          <div class="footer__signup-row">
+            <input type="email" name="email" placeholder="Email address" autocomplete="email" required aria-label="Email address" />
+            <button class="btn btn--accent" type="submit" aria-label="Join the guest list"><span class="arrow">→</span></button>
+          </div>
+          <p class="signup__done">You are on the list.</p>
+        </form>
       </div>
       <div class="footer__col">
         <span class="eyebrow">Visit</span>
@@ -915,6 +986,30 @@
     </div>
   </div>
 </footer>
+
+<!-- ============================== CAPTURE MODAL ============================== -->
+<div class="capture" id="capture-modal" role="dialog" aria-modal="true" aria-labelledby="capture-title" aria-hidden="true">
+  <div class="capture__overlay" data-capture-close></div>
+  <div class="capture__panel">
+    <button class="capture__close" aria-label="Close" data-capture-close>&times;</button>
+    <div class="capture__photo" aria-hidden="true">
+      <img src="../uploads/3Cities%202-11-76.jpg" alt="" loading="lazy" />
+    </div>
+    <div class="capture__body">
+      <span class="eyebrow eyebrow--accent">The Guest List</span>
+      <h3 class="capture__title" id="capture-title">See a night <em>for yourself</em>.</h3>
+      <p class="capture__copy">One email a month with the calendar and the gatherings that are open to the public. Come feel the room before you apply.</p>
+      <form class="signup" data-signup data-signup-page="Homepage popup" novalidate>
+        <div class="signup__row">
+          <input type="email" name="email" placeholder="Email address" autocomplete="email" required aria-label="Email address" />
+          <button class="btn btn--accent" type="submit">Get the Invites</button>
+        </div>
+        <p class="signup__done">You are on the list. Watch your inbox.</p>
+      </form>
+      <button class="capture__dismiss" data-capture-close>Maybe later</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -1003,6 +1098,7 @@
   }
 })();
 </script>
+<script src="site.js"></script>
 
 </body>
 </html>
