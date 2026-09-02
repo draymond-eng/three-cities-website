@@ -1,1 +1,586 @@
-PLACEHOLDER_WILL_FAIL
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Programming | Three Cities Social</title>
+<meta name="description" content="Dinners, runs, talks, watch parties, and weekly programming at Three Cities Social in Chicago. River North and Wicker Park." />
+<!-- SEO -->
+<link rel="canonical" href="https://threecitiessocial.com/programming" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Three Cities Social" />
+<meta property="og:url" content="https://threecitiessocial.com/programming" />
+<meta property="og:title" content="Programming. The Three Cities Social Calendar." />
+<meta property="og:description" content="Dinners, runs, talks, watch parties, and weekly programming at Three Cities Social in Chicago. River North and Wicker Park." />
+<meta property="og:image" content="https://threecitiessocial.com/uploads/TC%20Nov%20Event-43.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Programming. The Three Cities Social Calendar." />
+<meta name="twitter:description" content="Dinners, runs, talks, watch parties, and weekly programming at Three Cities Social in Chicago. River North and Wicker Park." />
+<meta name="twitter:image" content="https://threecitiessocial.com/uploads/TC%20Nov%20Event-43.jpg" />
+
+<link rel="icon" type="image/png" href="../assets/icons/mark-black.png" />
+<link rel="apple-touch-icon" href="../assets/icons/mark-black.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Page hero */
+.page-hero {
+  padding: 140px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 720px) { .page-hero { padding: 180px 0 96px; } }
+.page-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: end;
+}
+@media (min-width: 900px) {
+  .page-hero__inner { grid-template-columns: 1fr 1fr; gap: 64px; }
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(64px, 11vw, 168px);
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.page-hero h1 em { font-style: italic; color: var(--accent); }
+.page-hero__meta {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 14px;
+}
+.page-hero__meta::before {
+  content: ""; width: 28px; height: 1px; background: currentColor;
+}
+.page-hero__intro p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--fg-muted);
+  max-width: 44ch;
+}
+
+/* Pillars grid */
+.gather {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 760px)  { .gather { grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); } }
+.gather__card {
+  padding: 36px 0;
+  border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 10px;
+}
+@media (min-width: 760px) {
+  .gather__card {
+    padding: 48px 28px;
+    border-top: 0;
+    border-right: 1px solid var(--line);
+  }
+  .gather__card:last-child { border-right: 0; }
+}
+.gather__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent);
+}
+.gather__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.6vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+  margin: 0;
+}
+.gather__copy {
+  font-size: 14px;
+  color: var(--fg-muted);
+  line-height: 1.6;
+  max-width: 28ch;
+}
+
+/* Section heads */
+.section-banner {
+  display: flex; align-items: end; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  padding-bottom: 28px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.section-banner__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--accent);
+}
+.section-banner__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+.section-banner__title em { font-style: italic; color: var(--accent); }
+
+/* Date headings + event rows */
+.day-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 760px) {
+  .day-block {
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: start;
+    padding: 36px 0;
+  }
+}
+.day-block__date {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.day-block__day-num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(56px, 6vw, 84px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+}
+.day-block__day-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.day-block__events {
+  display: flex; flex-direction: column; gap: 0;
+}
+.event-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 760px) {
+  .event-row {
+    grid-template-columns: 92px 1fr auto;
+    gap: 28px;
+    align-items: baseline;
+  }
+}
+.event-row:first-child { border-top: 0; padding-top: 4px; }
+.event-row__time {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+.event-row__title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  transition: color 220ms;
+}
+.event-row__title a:hover { color: var(--accent); }
+.rsvp-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 8px;
+  border-radius: 2px;
+  margin-left: 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.event-row__body { display: flex; flex-direction: column; gap: 4px; }
+.event-row__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  color: var(--fg);
+  margin: 0;
+}
+.event-row__meta {
+  display: flex; flex-wrap: wrap; gap: 4px 14px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+}
+.event-row__meta span + span::before {
+  content: "·"; margin-right: 12px; color: var(--fg-faint);
+}
+.event-row__access {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+  white-space: nowrap;
+  align-self: start;
+  margin-top: 8px;
+}
+@media (min-width: 760px) { .event-row__access { margin-top: 6px; } }
+.event-row__access--open { color: var(--accent); }
+.event-row__pillar {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 700;
+}
+.event-row__pillar::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Month banner */
+.month-banner {
+  padding-top: 16px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  display: flex; align-items: baseline; gap: 24px;
+  border-top: 1px solid var(--line-strong);
+}
+.month-banner__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 40px);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.month-banner__count {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* Empty state */
+.empty {
+  padding: 64px 0;
+  text-align: center;
+  color: var(--fg-muted);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+
+/* Footer closer */
+.visit {
+  padding: 96px 0;
+  text-align: center;
+  background: var(--bg-sunken);
+}
+.visit h2 { margin: 0 auto; max-width: 18ch; }
+.visit p { margin: 16px auto 28px; max-width: 40ch; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" data-screen-label="01 Nav">
+  <div class="nav__inner">
+    <a class="nav__brand wordmark wordmark--nav" href="index.html" aria-label="Three Cities Social home">
+      <img src="../assets/logos/wordmark-wide-black.png" alt="Three Cities Social" />
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="story.html">Story</a>
+      <span class="nav__has-dropdown">
+        <a href="locations.html">Locations</a>
+        <span class="nav__dropdown">
+          <a href="river-north.html">River North</a>
+          <a href="wicker-park.html">Wicker Park</a>
+        </span>
+      </span>
+      <span class="nav__has-dropdown">
+        <a href="events.html" class="is-active">Programming</a>
+        <span class="nav__dropdown">
+          <a href="events.html">Calendar</a>
+          <a href="networking-events-chicago.html">Networking Events</a>
+        </span>
+      </span>
+      <a href="membership.html">Membership</a>
+      <span class="nav__has-dropdown">
+        <a href="host.html">Host</a>
+        <span class="nav__dropdown">
+          <a href="host.html">Venue Rental</a>
+          <a href="host-a-dinner.html">Host a Dinner</a>
+        </span>
+      </span>
+    </nav>
+    <div class="nav__right">
+      <a href="membership.html#apply" class="btn btn--accent nav__cta">Apply</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" data-toggle-drawer><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="nav__drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav__drawer-close" aria-label="Close menu" data-close-drawer>&times;</button>
+  <a href="story.html">Story</a>
+  <a href="locations.html">Locations</a>
+  <a href="river-north.html" class="nav__drawer-sub">River North</a>
+  <a href="wicker-park.html" class="nav__drawer-sub">Wicker Park</a>
+  <a href="events.html">Programming</a>
+  <a href="networking-events-chicago.html" class="nav__drawer-sub">Networking Events</a>
+  <a href="membership.html">Membership</a>
+  <a href="host.html">Venue Rental</a>
+  <a href="host-a-dinner.html" class="nav__drawer-sub">Host a Dinner</a>
+  <a href="membership.html#apply" class="btn btn--accent">Apply for Membership</a>
+</aside>
+
+<!-- HERO -->
+<section class="page-hero" data-screen-label="02 Hero">
+  <div class="shell">
+    <div class="page-hero__inner">
+      <div>
+        <div class="page-hero__meta reveal" id="month-range">September 2026 &middot; Programming</div>
+        <h1 class="reveal" style="--delay: 80ms">What&rsquo;s on<br /><em>the calendar</em>.</h1>
+      </div>
+      <div class="page-hero__intro reveal" style="--delay: 160ms">
+        <p>Events designed around five ways we gather. Most run inside the River North clubhouse. The rest take us into the neighborhoods we call home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE WAYS -->
+<section class="section section--tight" data-screen-label="03 Five Ways">
+  <div class="shell">
+    <div class="section-banner reveal">
+      <span class="section-banner__num">i.</span>
+      <h2 class="section-banner__title">Five ways <em>we gather</em>.</h2>
+    </div>
+    <div class="gather reveal">
+      <article class="gather__card">
+        <span class="gather__num">i.</span>
+        <h3 class="gather__name">Move</h3>
+        <p class="gather__copy">Bodies in motion. Workouts, walks, sport, and outdoor adventure.</p>
+      </article>
+      <article class="gather__card">
+        <span class="gather__num">ii.</span>
+        <h3 class="gather__name">Play</h3>
+        <p class="gather__copy">Games, tournaments, and competition that gives the room a pulse.</p>
+      </article>
+      <article class="gather__card">
+        <span class="gather__num">iii.</span>
+        <h3 class="gather__name">Talk</h3>
+        <p class="gather__copy">Conversation with intention. Speakers, lessons, book clubs, and dinner-table debates.</p>
+      </article>
+      <article class="gather__card">
+        <span class="gather__num">iv.</span>
+        <h3 class="gather__name">Social</h3>
+        <p class="gather__copy">Open gatherings. The kind of nights you can show up to alone and not stay alone.</p>
+      </article>
+      <article class="gather__card">
+        <span class="gather__num">v.</span>
+        <h3 class="gather__name">Serve</h3>
+        <p class="gather__copy">Showing up for the city. Volunteer days and community impact work.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="section" data-screen-label="04 Calendar">
+  <div class="shell">
+    <div class="section-banner reveal">
+      <span class="section-banner__num">ii.</span>
+      <h2 class="section-banner__title">The <em>calendar</em>.</h2>
+    </div>
+
+    <div id="calendar-root">
+      <p class="empty">Loading the calendar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" data-screen-label="05 Visit">
+  <div class="shell shell--narrow">
+    <span class="eyebrow eyebrow--accent reveal">Visit Us</span>
+    <h2 class="h-section reveal" style="--delay: 80ms; margin-top: 14px;">Programming is just <em>the start</em>.</h2>
+    <p class="lede reveal" style="--delay: 160ms; text-align: center; margin: 16px auto 0;">The people make it what it is. Come see for yourself.</p>
+    <div class="reveal" style="--delay: 240ms; display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top: 32px;">
+      <a href="membership.html#apply" class="btn btn--accent btn--lg">Apply for Membership <span class="arrow">→</span></a>
+      <a href="../join.html" class="btn btn--ghost btn--lg">Book a Tour</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="wordmark wordmark--footer" href="index.html" aria-label="Three Cities Social home">
+          <img src="../assets/logos/wordmark-wide-cream.png" alt="Three Cities Social" />
+        </a>
+        <p>A membership club in Chicago, built around connection. Two clubhouses, programming every week.</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Visit</span>
+        <a href="locations.html#river-north">River North<br/>320 W. Ohio St</a>
+        <a href="locations.html#wicker-park" style="margin-top: 10px;">Wicker Park<br/>1643 N. Milwaukee Ave</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">House</span>
+        <a href="story.html">Our Story</a>
+        <a href="events.html">Programming</a>
+        <a href="host.html">Venue Rental</a>
+      <a href="membership.html">Membership</a>
+        <a href="../join.html">Book a Tour</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow">Contact</span>
+        <a href="mailto:hello@threecitiessocial.com">hello@threecitiessocial.com</a>
+        <a href="https://instagram.com/threecities.social" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>&copy; 2026 Three Cities Social</span>
+    </div>
+  </div>
+</footer>
+
+<script src="events.js"></script>
+<script>
+(function () {
+  'use strict';
+  var drawer = document.getElementById('nav-drawer');
+  var toggleBtn = document.querySelector('[data-toggle-drawer]');
+  var closeBtn  = document.querySelector('[data-close-drawer]');
+  function open()  { drawer.classList.add('is-open');    drawer.setAttribute('aria-hidden','false'); toggleBtn.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+  function close() { drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true');  toggleBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (toggleBtn) toggleBtn.addEventListener('click', open);
+  if (closeBtn)  closeBtn.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('is-open')) close(); });
+
+  // ---- Render calendar ----
+  var H = window.TCS_EVENT_HELPERS;
+  var events = (window.TCS_EVENTS || []).slice().sort(function (a, b) {
+    return H.parseDate(a) - H.parseDate(b);
+  });
+
+  // Group by date.
+  var byDate = {};
+  events.forEach(function (e) {
+    if (!byDate[e.date]) byDate[e.date] = [];
+    byDate[e.date].push(e);
+  });
+
+  // Group dates by year+month for month banners.
+  var groupedByMonth = {};
+  Object.keys(byDate).sort().forEach(function (date) {
+    var d = H.parseDate(byDate[date][0]);
+    var key = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+    if (!groupedByMonth[key]) groupedByMonth[key] = { date: d, dates: [] };
+    groupedByMonth[key].dates.push(date);
+  });
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+    });
+  }
+
+  var html = '';
+  var monthKeys = Object.keys(groupedByMonth).sort();
+  monthKeys.forEach(function (mk) {
+    var m = groupedByMonth[mk];
+    html += '<div class="month-banner">';
+    html += '<h3 class="month-banner__name">' + esc(H.monthName(m.date)) + ' ' + m.date.getFullYear() + '</h3>';
+    html += '<span class="month-banner__count">' + m.dates.reduce(function (acc, d) { return acc + byDate[d].length; }, 0) + ' events</span>';
+    html += '</div>';
+    m.dates.forEach(function (date) {
+      var d = H.parseDate(byDate[date][0]);
+      html += '<div class="day-block">';
+      html += '<div class="day-block__date">';
+      html += '<span class="day-block__day-name">' + esc(H.dayName(d)) + '</span>';
+      html += '<span class="day-block__day-num">' + d.getDate() + '</span>';
+      html += '</div>';
+      html += '<div class="day-block__events">';
+      byDate[date].forEach(function (e) {
+        var isOpen = e.access === 'Open to Public';
+        html += '<article class="event-row">';
+        html += '<div class="event-row__time">' + esc(H.formatTime(e.time)) + '</div>';
+        html += '<div class="event-row__body">';
+        var titleHtml = e.rsvp
+          ? '<a href="' + esc(e.rsvp) + '" target="_blank" rel="noopener">' + esc(e.title) + ' <span class="rsvp-tag">RSVP →</span></a>'
+          : esc(e.title);
+        html += '<h4 class="event-row__title">' + titleHtml + '</h4>';
+        html += '<div class="event-row__meta">';
+        html += '<span class="event-row__pillar">' + esc(e.pillar) + '</span>';
+        html += '</div>';
+        html += '</div>';
+        html += '<span class="event-row__access' + (isOpen ? ' event-row__access--open' : '') + '">' + esc(e.access) + '</span>';
+        html += '</article>';
+      });
+      html += '</div></div>';
+    });
+  });
+
+  document.getElementById('calendar-root').innerHTML = html || '<p class="empty">No events on the calendar right now. Check back soon.</p>';
+
+  // Keep the hero month label in sync with what's on the calendar.
+  var rangeEl = document.getElementById('month-range');
+  if (rangeEl && monthKeys.length) {
+    var names = monthKeys.map(function (mk) {
+      return H.monthName(groupedByMonth[mk].date);
+    });
+    var year = groupedByMonth[monthKeys[0]].date.getFullYear();
+    var label = names.length === 1
+      ? (names[0] + ' ' + year)
+      : (names.join(' · ') + ' ' + year);
+    rangeEl.textContent = label + ' · Programming';
+  }
+
+  // ---- Reveal on scroll ----
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
