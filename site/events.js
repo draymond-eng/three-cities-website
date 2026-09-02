@@ -1,43 +1,43 @@
 /* =========================================================
-   Three Cities Social — Events Data
+   Three Cities Social - Events Data
    Single source of truth. Edit this file to update the
    homepage "What's on the calendar" and the full Events page.
    Times are 24-hour for sorting; rendered as 12-hour on page.
    ========================================================= */
 
 window.TCS_EVENTS = [
-  // === JULY 2026 ===
-  { date: "2026-07-01", time: "17:00", title: "Blue Line Social Group",                           location: "Easy Bar · Damen",             access: "Members Only", pillar: "Social" },
-  { date: "2026-07-07", time: "18:30", title: "Better Than Small Talk: A Conversation-Driven Dinner", location: "Three Cities · River North", access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-08", time: "18:00", title: "Recharge Your Energy: The Nutrition Habits That Help You Thrive", location: "Three Cities · River North", access: "Members Only", pillar: "Talk" },
-  { date: "2026-07-10", time: "17:15", title: "Art & Culture Outing: Martin Wong, Chinatown USA", location: "Wrightwood 659",               access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-10", time: "19:00", title: "Game Night",                                       location: "Three Cities · River North",   access: "Members Only", pillar: "Play"   },
-  { date: "2026-07-11", time: "10:00", title: "Volunteer Day at Homan Rails Farm",                location: "Homan Rails Farm",             access: "Members Only", pillar: "Serve"  },
-  { date: "2026-07-11", time: "14:30", title: "Yacht Outing on Lake Michigan",                    location: "Lake Michigan",                access: "Members Only", pillar: "Social" },
-  { date: "2026-07-12", time: "08:30", title: "Bike Club: North Branch Trail",                    location: "North Branch Trail",           access: "Members Only", pillar: "Move"   },
-  { date: "2026-07-12", time: "10:00", title: "Mahjong Mornings",                                 location: "Three Cities · River North",   access: "Members Only", pillar: "Play"   },
-  { date: "2026-07-13", time: "13:00", title: "Connection, Conversation and Community for Writers", location: "Three Cities · River North",  access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-13", time: "19:00", title: "Blood on the Clocktower, New Players Welcome",     location: "Three Cities · Wicker Park",   access: "Members Only", pillar: "Play"   },
-  { date: "2026-07-16", time: "17:30", title: "HEATED Reformer Pilates at Onyx",                  location: "Onyx · Wicker Park",           access: "Members Only", pillar: "Move"   },
-  { date: "2026-07-16", time: "18:30", title: "Fuckup Nights Chicago",                            location: "Three Cities · River North",   access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-17", time: "19:00", title: "Yacht Outing on Lake Michigan",                    location: "Lake Michigan",                access: "Members Only", pillar: "Social" },
-  { date: "2026-07-18", time: "08:00", title: "Three Dune Challenge, Indiana Dunes State Park",   location: "Indiana Dunes State Park",     access: "Members Only", pillar: "Move"   },
-  { date: "2026-07-18", time: "13:00", title: "Tours With Mike: Jackson Park Walking Tour",       location: "Jackson Park",                 access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-23", time: "18:00", title: "Sunset Nights at Homan Rails Farm: Volunteer",     location: "Homan Rails Farm",             access: "Members Only", pillar: "Serve"  },
-  { date: "2026-07-23", time: "18:00", title: "Fundraising for the Rest of Us: Chicago Tech Week", location: "Three Cities · River North",   access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-23", time: "19:00", title: "Let's Get Bubbly: Sparkling Wine Tasting",         location: "Three Cities · River North",   access: "Members Only", pillar: "Talk"   },
-  { date: "2026-07-25", time: "12:00", title: "Ride, Shop and Drink: The 606 Local Crawl",        location: "The 606 Trail",                access: "Members Only", pillar: "Social" },
-  { date: "2026-07-25", time: "14:30", title: "Yacht Outing on Lake Michigan",                    location: "Lake Michigan",                access: "Members Only", pillar: "Social" },
-  { date: "2026-07-25", time: "19:00", title: "Poker Night",                                      location: "Three Cities · River North",   access: "Members Only", pillar: "Play"   },
-  { date: "2026-07-29", time: "18:30", title: "Side A: Good Kid, M.A.A.D City",                   location: "Three Cities · River North",   access: "Members Only", pillar: "Social" },
-  { date: "2026-07-30", time: "18:00", title: "AI in Practice: A Hands-On Workshop",              location: "Three Cities · River North",   access: "Members Only", pillar: "Talk"   },
-
   // === SEPTEMBER 2026 ===
-  { date: "2026-09-09", time: "17:00", title: "Open House and NFL Kickoff Night",              location: "Three Cities · River North",   access: "Open to Public", pillar: "Social" },
-
-  // === AUGUST 2026 ===
-  { date: "2026-08-01", time: "15:00", title: "Adult Field Day",                                  location: "Cricket Hill · Lincoln Park",  access: "Members Only", pillar: "Play"   },
-  { date: "2026-08-16", time: "10:00", title: "Yacht Outing on Lake Michigan: Air and Water Show", location: "Lake Michigan",               access: "Members Only", pillar: "Social" }
+  { date: "2026-09-02", time: "16:00", title: "Office Hours w/ Dr. Kortney Peagram", location: "Three Cities · Wicker Park", access: "Members Only", pillar: "Talk" },
+  { date: "2026-09-02", time: "18:00", title: "Page & Pour", location: "Three Cities · River North", access: "Open to Public", pillar: "Talk" },
+  { date: "2026-09-04", time: "17:30", title: "Happy Hour: Open Bar", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-04", time: "19:00", title: "New Member Mixer", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-05", time: "15:00", title: "Adult Field Day", location: "Cricket Hill · Lincoln Park", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-06", time: "09:30", title: "Mahjong Mornings", location: "Three Cities · River North", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-06", time: "12:00", title: "Pickleball: Lincoln Park SPF", location: "Lincoln Park SPF", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-09", time: "14:30", title: "Midday Ditch: River Cruise", location: "FBC · Streeterville", access: "Members Only", pillar: "Social" },
+  { date: "2026-09-13", time: "12:00", title: "NFL Kickoff - Sunday Ticket + Bears", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-15", time: "19:00", title: "Pilates with Rosie", location: "Three Cities · River North", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-16", time: "18:00", title: "Flow with Chloe", location: "Three Cities · River North", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-16", time: "19:00", title: "Trivia Night", location: "Three Cities · River North", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-17", time: "19:00", title: "Side A: Nirvana Unplugged in New York", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-17", time: "19:00", title: "The Hidden Table", location: "TBD", access: "Members Only", pillar: "Social" },
+  { date: "2026-09-18", time: "19:30", title: "The Traitors: Season Premiere Watch Party", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-18", time: "21:00", title: "Broadway Rave (Tickets Included)", location: "Subterranean", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-20", time: "09:30", title: "Mahjong Mornings", location: "Three Cities · River North", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-20", time: "12:00", title: "Pickleball: Lincoln Park SPF", location: "Lincoln Park SPF", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-21", time: "18:00", title: "Mahjong Evenings: The Wash", location: "Three Cities · River North", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-23", time: "19:00", title: "Trivia Night", location: "Three Cities · River North", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-24", time: "19:00", title: "Sipping North of the Equator: Wine Tasting", location: "Three Cities · River North", access: "Open to Public", pillar: "Talk" },
+  { date: "2026-09-24", time: "19:00", title: "Book Club: Demon Copperhead", location: "Three Cities · River North", access: "Open to Public", pillar: "Talk" },
+  { date: "2026-09-25", time: "18:00", title: "Happy Hour Karaoke Night", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-26", time: "11:00", title: "Come Back to Life: Introducing SUCO at Three Cities Social", location: "Three Cities · River North", access: "Members Only", pillar: "Talk" },
+  { date: "2026-09-26", time: "19:00", title: "Lemonade: Film Watch Party", location: "Three Cities · River North", access: "Open to Public", pillar: "Social" },
+  { date: "2026-09-27", time: "12:00", title: "Together We Roam - Rogers Park", location: "Jarvis Beach", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-28", time: "18:00", title: "Mahjong Evenings: The Wash", location: "Three Cities · River North", access: "Open to Public", pillar: "Play" },
+  { date: "2026-09-28", time: "18:30", title: "Spin Class at Spynergy Wicker Park", location: "1632b W. Division St.", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-29", time: "18:30", title: "No Book, Book Club: Can AI Actually Connect With Us?", location: "Three Cities · River North", access: "Open to Public", pillar: "Talk" },
+  { date: "2026-09-29", time: "19:00", title: "Pilates with Rosie", location: "Three Cities · River North", access: "Open to Public", pillar: "Move" },
+  { date: "2026-09-30", time: "18:30", title: "Dating Detox: A Short History of Dating and What Happened to Us", location: "Three Cities · River North", access: "Open to Public", pillar: "Talk" },
 ];
 
 // === Helpers exported for the renderers ===
